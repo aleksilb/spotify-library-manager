@@ -1,0 +1,29 @@
+-tagitus
+	-tagien tyyppi
+	-hierarkiset tagit
+-lisätiedot
+	-spotifyn omat tiedot
+	-ulkopuoliset tiedot
+-albumit
+	-albumilistat
+	-tagit
+	
+-soitin
+-soittolistojen teko
+
+-biisien listaus
+    -nimi
+    -albumi
+    -artisti
+    -kesto
+    -järjestäminen
+-haku
+    -biisin lisäys listaan
+-omat listat
+    -listojen selaus
+    -listan avaaminen
+-biisin soittaminen
+-soittolistan tallentaminen
+-tagitus
+    -biisin tagitus
+    -uuden tagin luominen
