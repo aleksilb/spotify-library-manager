@@ -21,10 +21,21 @@ function SongList(props) {
                 <td>
                     {song.artist}
                 </td>
+                <td>
+                    {toMinutes(song.length)}
+                </td>
             </tr>
         )}
         </tbody>
     </table>);
+}
+
+function toMinutes(totalSeconds) {
+    let minutes = Math.floor(totalSeconds / 60);
+    let seconds = totalSeconds % 60;
+    if (seconds < 10) {seconds = "0"+seconds;}
+
+    return minutes + ":" + seconds;
 }
 
 export default SongList;

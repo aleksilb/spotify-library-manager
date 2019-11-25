@@ -12,10 +12,12 @@ function App() {
 let songs = [
   {name: 'Hey Big Eyes',
     album: 'Pang',
-    artist: 'Caroline Polachek'},
+    artist: 'Caroline Polachek',
+    length: 376},
   {name: 'LesAlpx',
     album: 'Crush',
-    artist: 'Floating Points'}
+    artist: 'Floating Points',
+    length: 189}
 ];
 
 export default App;
