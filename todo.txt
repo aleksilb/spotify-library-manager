@@ -27,3 +27,13 @@
 -tagitus
     -biisin tagitus
     -uuden tagin luominen
+
+
+1. Omien listojen selaus lisätietojen kanssa
+    -omien listojen listaus
+    -listan avaaminen
+    -soittolista lisätietojen kanssa
+2. Lisääminen listaan
+3. Uuden listan tekeminen
+4. Hakeminen
+5. Soittaminen
