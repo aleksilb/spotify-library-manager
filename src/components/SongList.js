@@ -4,38 +4,44 @@ function SongList(props) {
     return (<table>
         <thead>
         <tr>
-            <th>Song</th>
-            <th>Album</th>
-            <th>Artist</th>
+        {fields.map((field) =>
+            <th>{field.label}   </th>
+        )}
         </tr>
         </thead>
         <tbody>
         {props.songs.map((song) =>
             <tr key={song.name}>
-                <td>
-                    {song.name}
-                </td>
-                <td>
-                    {song.album}
-                </td>
-                <td>
-                    {song.artist}
-                </td>
-                <td>
-                    {toMinutes(song.length)}
-                </td>
+                {fields.map((field) =>
+                        <td>{song[field.field]}</td>
+                )}
             </tr>
         )}
         </tbody>
     </table>);
 }
 
-function toMinutes(totalSeconds) {
-    let minutes = Math.floor(totalSeconds / 60);
-    let seconds = totalSeconds % 60;
-    if (seconds < 10) {seconds = "0"+seconds;}
-
-    return minutes + ":" + seconds;
-}
+let fields = [
+    {
+        "label" : "Name",
+        "field" : "name"
+    },
+    {
+        "label" : "Album",
+        "field" : "album"
+    },
+    {
+        "label" : "Artist",
+        "field" : "artist"
+    },
+    {
+        "label" : "Length",
+        "field" : "length"
+    },
+    {
+        "label" : "Year",
+        "field" : "year"
+    }
+];
 
 export default SongList;
