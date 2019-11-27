@@ -1,10 +1,12 @@
 import React from 'react';
 import SongList from './components/SongList.js';
+import PlayListList from './components/PlayListList';
 
 function App() {
   return (
     <div className="App">
-      <SongList songs={songs}/>
+        <PlayListList playlists={playlists}/>
+        <SongList songs={songs}/>
     </div>
   );
 }
@@ -20,6 +22,10 @@ let songs = [
     artist: 'Floating Points',
     length: '5:13',
     year: 1999 }
+];
+
+let playlists = [
+    {"name" : "Uudet tsekattavat"}
 ];
 
 export default App;
