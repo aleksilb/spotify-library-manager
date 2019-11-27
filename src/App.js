@@ -1,11 +1,11 @@
 import React from 'react';
 import SongList from './components/SongList.js';
-import PlayListList from './components/PlayListList';
+import PlaylistList from './components/PlaylistList';
 
 function App() {
   return (
     <div className="App">
-        <PlayListList playlists={playlists}/>
+        <PlaylistList playlists={playlists}/>
         <SongList songs={songs}/>
     </div>
   );

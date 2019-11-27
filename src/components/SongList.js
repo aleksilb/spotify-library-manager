@@ -1,7 +1,9 @@
 import React from 'react';
 
 function SongList(props) {
-    return (<table>
+    return (<div>
+        <h2>Playlist</h2>
+        <table>
         <thead>
         <tr>
         {fields.map((field) =>
@@ -18,7 +20,8 @@ function SongList(props) {
             </tr>
         )}
         </tbody>
-    </table>);
+    </table>
+    </div>);
 }
 
 let fields = [
