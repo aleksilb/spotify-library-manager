@@ -6,45 +6,21 @@ function SongList(props) {
         <table>
         <thead>
         <tr>
-        {fields.map((field) =>
-            <th>{field.label}   </th>
-        )}
+            <th>Name</th>
         </tr>
         </thead>
         <tbody>
-        {props.songs.map((song) =>
-            <tr key={song.name}>
-                {fields.map((field) =>
-                        <td>{song[field.field]}</td>
-                )}
-            </tr>
+        {props.items.map((item) => {
+                let track = item.track;
+                if(!track) return;
+                return <tr key={track.id}>
+                    <td>{track.name}</td>
+                </tr>
+            }
         )}
         </tbody>
     </table>
     </div>);
 }
-
-let fields = [
-    {
-        "label" : "Name",
-        "field" : "name"
-    },
-    {
-        "label" : "Album",
-        "field" : "album"
-    },
-    {
-        "label" : "Artist",
-        "field" : "artist"
-    },
-    {
-        "label" : "Length",
-        "field" : "length"
-    },
-    {
-        "label" : "Year",
-        "field" : "year"
-    }
-];
 
 export default SongList;
