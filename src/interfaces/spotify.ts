@@ -62,7 +62,7 @@ export interface Track {
 }
 
 export interface PlaylistItem {
-    added_at: Date;
+    added_at: string;
     added_by: AddedBy;
     is_local: boolean;
     track: Track;

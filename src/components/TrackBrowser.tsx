@@ -1,8 +1,12 @@
 import * as React from "react";
-import TrackList from "../classes/TrackList";
+import Track from "../classes/Track";
 
-export const SongList = (props : TrackList) => {
-    return (<div>
+interface TrackBrowserProps {
+    tracks: Track[];
+}
+
+export const TrackBrowser = (props : TrackBrowserProps) => {
+    return <div>
         <h2>Playlist</h2>
         <table>
         <thead>
@@ -14,9 +18,8 @@ export const SongList = (props : TrackList) => {
         </thead>
         <tbody>
         {props.tracks.map((track) => {
-            let artistNames : [string] = [null];
-            track.artists.map((artist) => {
-                artistNames.push(artist.name);
+            let artistNames = track.artists.map((artist) => {
+                return artist.name;
             });
             return <tr key={track.id}>
                 <td>{track.name}</td>
@@ -27,5 +30,5 @@ export const SongList = (props : TrackList) => {
         )}
         </tbody>
     </table>
-    </div>);
+    </div>
 };
