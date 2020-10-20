@@ -5,7 +5,7 @@ interface TrackBrowserProps {
     tracks: Track[];
 }
 
-export const TrackBrowser = (props : TrackBrowserProps) => {
+export const TrackBrowser = ({tracks} : TrackBrowserProps) => {
     return <div>
         <h2>Playlist</h2>
         <table>
@@ -17,7 +17,7 @@ export const TrackBrowser = (props : TrackBrowserProps) => {
         </tr>
         </thead>
         <tbody>
-        {props.tracks.map((track) => {
+        {tracks != null && tracks.map((track) => {
             let artistNames = track.artists.map((artist) => {
                 return artist.name;
             });

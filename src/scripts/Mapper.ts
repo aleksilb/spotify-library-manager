@@ -1,10 +1,10 @@
-import {PlaylistTracks, UserPlaylists} from "../interfaces/spotify";
+import {Playlist as SpotifyPlaylist, UserPlaylists} from "../interfaces/spotify";
 import Track from "../classes/Track";
 import Playlist from "../classes/Playlist";
 
 export default class Mapper {
-    static tracksFromSpotifyPlaylist = (spotifyTrackList : PlaylistTracks) : Track[] => {
-        return spotifyTrackList.items.map((item) => {
+    static tracksFromSpotifyPlaylist = (spotifyPlaylist : SpotifyPlaylist) : Track[] => {
+        return spotifyPlaylist.tracks.items.map((item) => {
             return Track.createFromSpotify(item.track);
         });
     };

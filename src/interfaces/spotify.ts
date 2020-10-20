@@ -61,21 +61,11 @@ export interface Track {
     uri: string;
 }
 
-export interface PlaylistItem {
+export interface PlaylistTrack {
     added_at: string;
     added_by: AddedBy;
     is_local: boolean;
     track: Track;
-}
-
-export interface PlaylistTracks {
-    href: string;
-    items: PlaylistItem[];
-    limit: number;
-    next?: any;
-    offset: number;
-    previous?: any;
-    total: number;
 }
 
 export interface Owner {
@@ -93,6 +83,7 @@ export interface Tracks {
 
 export interface Playlist {
     collaborative: boolean;
+    description: string;
     external_urls: ExternalUrls;
     href: string;
     id: string;
@@ -101,9 +92,19 @@ export interface Playlist {
     owner: Owner;
     public: boolean;
     snapshot_id: string;
-    tracks: Tracks;
+    tracks: Paging;
     type: string;
     uri: string;
+}
+
+export interface Paging {
+    href: string;
+    items: PlaylistTrack[];
+    limit: bigint;
+    next: string;
+    offset: bigint;
+    previous: string;
+    total: bigint;
 }
 
 export interface UserPlaylists {

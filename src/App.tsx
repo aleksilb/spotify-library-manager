@@ -1,18 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { TrackBrowser } from './components/TrackBrowser';
 import { PlaylistBrowser } from './components/PlaylistBrowser';
-import userPlaylists from './mock/user_playlists.json';
-import playlistTracks from './mock/playlist_tracks.json';
-import Playlist from "./classes/Playlist";
-import Track from "./classes/Track";
-import Mapper from "./scripts/Mapper";
+import Spotify from "./scripts/Spotify";
 
 function App() {
-    let tracks : Track[] = Mapper.tracksFromSpotifyPlaylist(playlistTracks);
-    let playlists : Playlist[] = Mapper.playlistsFromSpotifyUserPlaylists(userPlaylists);
+    const [tracks, setTracks] = useState(Spotify.getPlaylistTracks("mock-playlist"));
+    const [playlists, setPlaylists] = useState(Spotify.getUserPlaylists("mock-user"))
+
+    const selectHandler = (playlistId:string) => {
+        setTracks(Spotify.getPlaylistTracks(playlistId));
+    }
 
     return <div className="App">
-        <PlaylistBrowser playlists={playlists}/>
+        <PlaylistBrowser playLists={playlists} selectHandler={selectHandler}/>
         <TrackBrowser tracks={tracks}/>
     </div>;
 }
