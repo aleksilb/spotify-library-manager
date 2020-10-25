@@ -1,6 +1,8 @@
-import {Playlist as SpotifyPlaylist, UserPlaylists} from "../interfaces/spotify";
+import {Playlist as SpotifyPlaylist, UserPlaylists, Track as SpotifyTrack} from "../interfaces/spotify";
 import Track from "../classes/Track";
 import Playlist from "../classes/Playlist";
+import Album from "../classes/Album";
+import Artist from "../classes/Artist";
 
 export default class Mapper {
     static tracksFromSpotifyPlaylist = (spotifyPlaylist : SpotifyPlaylist) : Track[] => {
@@ -14,4 +16,14 @@ export default class Mapper {
             return Playlist.createFromSpotify(item);
         });
     };
+
+    static createTrack = (spotifyTrack : SpotifyTrack) : Track => {
+        let album : Album = Album.createFromSpotify(spotifyTrack.album);
+        let artists : Artist[] = [];
+        spotifyTrack.artists.map((artist) => {
+            artists.push(Artist.createFromSpotify(artist));
+        });
+
+        return new Track(spotifyTrack.id, spotifyTrack.name, album, artists, "");
+    }
 }

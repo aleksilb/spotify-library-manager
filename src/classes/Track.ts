@@ -1,4 +1,5 @@
 import * as spotify from '../interfaces/spotify';
+import * as musicBrainz from '../interfaces/music_brainz';
 import Album from './Album';
 import Artist from "./Artist";
 
@@ -7,12 +8,14 @@ class Track {
     name: string;
     album: Album;
     artists: Artist[];
+    country: string;
 
-    constructor(id: string, name : string, album : Album, artists : Artist[]) {
+    constructor(id: string, name : string, album : Album, artists : Artist[], country : string) {
         this.id = id;
         this.name = name;
         this.album = album;
         this.artists = artists;
+        this.country = country;
     }
 
     static createFromSpotify(spotifyTrack : spotify.Track) {
@@ -21,7 +24,7 @@ class Track {
         spotifyTrack.artists.map((artist) => {
             artists.push(Artist.createFromSpotify(artist));
         });
-        return new Track(spotifyTrack.id, spotifyTrack.name, album, artists);
+        return new Track(spotifyTrack.id, spotifyTrack.name, album, artists, "");
     }
 }
 

@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import { TrackBrowser } from './components/TrackBrowser';
 import { PlaylistBrowser } from './components/PlaylistBrowser';
-import Spotify from "./scripts/Spotify";
+import Data from "./scripts/Data";
 
 function App() {
-    const [tracks, setTracks] = useState(Spotify.getPlaylistTracks("mock-playlist"));
-    const [playlists, setPlaylists] = useState(Spotify.getUserPlaylists("mock-user"))
+    const [tracks, setTracks] = useState(Data.getPlaylistTracks("mock-playlist"));
+    const [playlists, setPlaylists] = useState(Data.getUserPlaylists("mock-user"))
 
     const selectHandler = (playlistId:string) => {
-        setTracks(Spotify.getPlaylistTracks(playlistId));
+        setTracks(Data.getPlaylistTracks(playlistId));
     }
 
     return <div className="App">
