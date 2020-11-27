@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.mapSpotifyArtist = exports.mapSpotifyAlbum = exports.mapSpotifyTrack = exports.mapSpotifyPlaylistWithTracks = exports.mapSpotifyPlaylist = void 0;
+exports.mapExtraDataToArtist = exports.mapSpotifyArtist = exports.mapSpotifyAlbum = exports.mapSpotifyTrack = exports.mapSpotifyPlaylistWithTracks = exports.mapSpotifyPlaylist = void 0;
 var Playlist_1 = require("./model/Playlist");
 var Track_1 = require("./model/Track");
 var Album_1 = require("./model/Album");
@@ -25,4 +25,9 @@ function mapSpotifyArtist(spotifyArtist) {
     return new Artist_1.default(spotifyArtist.id, spotifyArtist.name);
 }
 exports.mapSpotifyArtist = mapSpotifyArtist;
+function mapExtraDataToArtist(artist, artistData) {
+    artist.country = artistData.country;
+    return artist;
+}
+exports.mapExtraDataToArtist = mapExtraDataToArtist;
 //# sourceMappingURL=Mapping.js.map
