@@ -1,0 +1,2015 @@
+{
+  "collaborative": false,
+  "description": "",
+  "external_urls": {
+    "spotify": "https://open.spotify.com/playlist/0hXzW43N9IsskVZW6WlobW"
+  },
+  "href": "https://api.spotify.com/v1/playlists/0hXzW43N9IsskVZW6WlobW",
+  "id": "0hXzW43N9IsskVZW6WlobW",
+  "images": [
+    {
+      "height": 640,
+      "url": "https://i.scdn.co/image/ab67616d0000b273375abcb2ab18edc277523652",
+      "width": 640
+    }
+  ],
+  "name": "Kuuntele uudestaan levyt",
+  "owner": {
+    "display_name": "Aleksi Lindblad",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/user/1178309119"
+    },
+    "href": "https://api.spotify.com/v1/users/1178309119",
+    "id": "1178309119",
+    "type": "user",
+    "uri": "spotify:user:1178309119"
+  },
+  "public": true,
+  "snapshot_id": "MzYsMzczZTA3Zjc3M2NhMjgwMjlkOTFlNDA3NDk1ODM2NGI1NGI1MGM5Mw==",
+  "tracks": {
+    "href": "https://api.spotify.com/v1/playlists/0hXzW43N9IsskVZW6WlobW/tracks?offset=0&limit=100",
+    "items": [
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 227493,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11703799"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/26tVbVkCppuEgNSQRnIu1c"
+          },
+          "href": "https://api.spotify.com/v1/tracks/26tVbVkCppuEgNSQRnIu1c",
+          "id": "26tVbVkCppuEgNSQRnIu1c",
+          "is_local": false,
+          "name": "Sous le sable",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:26tVbVkCppuEgNSQRnIu1c"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 154626,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11703800"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4nRHgEV9qUd0UbZVtKNjJf"
+          },
+          "href": "https://api.spotify.com/v1/tracks/4nRHgEV9qUd0UbZVtKNjJf",
+          "id": "4nRHgEV9qUd0UbZVtKNjJf",
+          "is_local": false,
+          "name": "Lasso",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 2,
+          "type": "track",
+          "uri": "spotify:track:4nRHgEV9qUd0UbZVtKNjJf"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 178600,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11702883"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0VdZp2rPImPCrViJWS4iHq"
+          },
+          "href": "https://api.spotify.com/v1/tracks/0VdZp2rPImPCrViJWS4iHq",
+          "id": "0VdZp2rPImPCrViJWS4iHq",
+          "is_local": false,
+          "name": "Fontaine de lait",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 3,
+          "type": "track",
+          "uri": "spotify:track:0VdZp2rPImPCrViJWS4iHq"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 170986,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11703801"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/476vApsQCGL3WY2qnOSLz6"
+          },
+          "href": "https://api.spotify.com/v1/tracks/476vApsQCGL3WY2qnOSLz6",
+          "id": "476vApsQCGL3WY2qnOSLz6",
+          "is_local": false,
+          "name": "Seeds",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 4,
+          "type": "track",
+          "uri": "spotify:track:476vApsQCGL3WY2qnOSLz6"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 132306,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11703802"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2I3c1ZOm32RCPzewThhYCv"
+          },
+          "href": "https://api.spotify.com/v1/tracks/2I3c1ZOm32RCPzewThhYCv",
+          "id": "2I3c1ZOm32RCPzewThhYCv",
+          "is_local": false,
+          "name": "Les Loups",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 5,
+          "type": "track",
+          "uri": "spotify:track:2I3c1ZOm32RCPzewThhYCv"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 157253,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11703803"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/50m05o8ZsMei7pTyx4T0Ec"
+          },
+          "href": "https://api.spotify.com/v1/tracks/50m05o8ZsMei7pTyx4T0Ec",
+          "id": "50m05o8ZsMei7pTyx4T0Ec",
+          "is_local": false,
+          "name": "Je ne mâche pas mes mots",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 6,
+          "type": "track",
+          "uri": "spotify:track:50m05o8ZsMei7pTyx4T0Ec"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 152160,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11703804"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7K81WvUVcy5TFXHBgTV5H5"
+          },
+          "href": "https://api.spotify.com/v1/tracks/7K81WvUVcy5TFXHBgTV5H5",
+          "id": "7K81WvUVcy5TFXHBgTV5H5",
+          "is_local": false,
+          "name": "Twix",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 7,
+          "type": "track",
+          "uri": "spotify:track:7K81WvUVcy5TFXHBgTV5H5"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 224440,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11703805"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4QqFA6XxWUsz8E09RYMbNu"
+          },
+          "href": "https://api.spotify.com/v1/tracks/4QqFA6XxWUsz8E09RYMbNu",
+          "id": "4QqFA6XxWUsz8E09RYMbNu",
+          "is_local": false,
+          "name": "Nuit debout",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 8,
+          "type": "track",
+          "uri": "spotify:track:4QqFA6XxWUsz8E09RYMbNu"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 148413,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11703806"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2OHTOLS0F7G2gJw7aSdk4D"
+          },
+          "href": "https://api.spotify.com/v1/tracks/2OHTOLS0F7G2gJw7aSdk4D",
+          "id": "2OHTOLS0F7G2gJw7aSdk4D",
+          "is_local": false,
+          "name": "Piscine",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 9,
+          "type": "track",
+          "uri": "spotify:track:2OHTOLS0F7G2gJw7aSdk4D"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 208053,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11703807"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6h7WlohcJUVObZCkcDMhtT"
+          },
+          "href": "https://api.spotify.com/v1/tracks/6h7WlohcJUVObZCkcDMhtT",
+          "id": "6h7WlohcJUVObZCkcDMhtT",
+          "is_local": false,
+          "name": "Fille à papa",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 10,
+          "type": "track",
+          "uri": "spotify:track:6h7WlohcJUVObZCkcDMhtT"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:01:58Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                },
+                "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                "name": "Camille",
+                "type": "artist",
+                "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/18LlCAG2iY8ht0dm7uKBy0"
+            },
+            "href": "https://api.spotify.com/v1/albums/18LlCAG2iY8ht0dm7uKBy0",
+            "id": "18LlCAG2iY8ht0dm7uKBy0",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27355457eed25b0dde275fcddeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255457eed25b0dde275fcddeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485155457eed25b0dde275fcddeb",
+                "width": 64
+              }
+            ],
+            "name": "OUÏ",
+            "release_date": "2017-06-02",
+            "release_date_precision": "day",
+            "total_tracks": 11,
+            "type": "album",
+            "uri": "spotify:album:18LlCAG2iY8ht0dm7uKBy0"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+              },
+              "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille",
+              "type": "artist",
+              "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 171622,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR9W11703808"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4n3Dq8jhwJfh8qctKFnnwo"
+          },
+          "href": "https://api.spotify.com/v1/tracks/4n3Dq8jhwJfh8qctKFnnwo",
+          "id": "4n3Dq8jhwJfh8qctKFnnwo",
+          "is_local": false,
+          "name": "Langue",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 11,
+          "type": "track",
+          "uri": "spotify:track:4n3Dq8jhwJfh8qctKFnnwo"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:02:34Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+                },
+                "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+                "id": "56ZTgzPBDge0OvCGgMO3OY",
+                "name": "Beach House",
+                "type": "artist",
+                "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+              }
+            ],
+            "available_markets": [
+              "AU",
+              "NZ"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/30XWJAQWUvARp2qPmJwbhj"
+            },
+            "href": "https://api.spotify.com/v1/albums/30XWJAQWUvARp2qPmJwbhj",
+            "id": "30XWJAQWUvARp2qPmJwbhj",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b2736c7e0fa72264cf66e11c9ce0",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e026c7e0fa72264cf66e11c9ce0",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d000048516c7e0fa72264cf66e11c9ce0",
+                "width": 64
+              }
+            ],
+            "name": "Thank Your Lucky Stars",
+            "release_date": "2015-10-16",
+            "release_date_precision": "day",
+            "total_tracks": 9,
+            "type": "album",
+            "uri": "spotify:album:30XWJAQWUvARp2qPmJwbhj"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+              },
+              "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+              "id": "56ZTgzPBDge0OvCGgMO3OY",
+              "name": "Beach House",
+              "type": "artist",
+              "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+            }
+          ],
+          "available_markets": [
+            "AU",
+            "NZ"
+          ],
+          "disc_number": 1,
+          "duration_ms": 240760,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "AUVB01500022"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5jAKSnxJ8uPA0ZVaKV4alJ"
+          },
+          "href": "https://api.spotify.com/v1/tracks/5jAKSnxJ8uPA0ZVaKV4alJ",
+          "id": "5jAKSnxJ8uPA0ZVaKV4alJ",
+          "is_local": false,
+          "name": "Majorette",
+          "popularity": 21,
+          "preview_url": null,
+          "track": true,
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:5jAKSnxJ8uPA0ZVaKV4alJ"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:02:34Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+                },
+                "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+                "id": "56ZTgzPBDge0OvCGgMO3OY",
+                "name": "Beach House",
+                "type": "artist",
+                "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+              }
+            ],
+            "available_markets": [
+              "AU",
+              "NZ"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/30XWJAQWUvARp2qPmJwbhj"
+            },
+            "href": "https://api.spotify.com/v1/albums/30XWJAQWUvARp2qPmJwbhj",
+            "id": "30XWJAQWUvARp2qPmJwbhj",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b2736c7e0fa72264cf66e11c9ce0",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e026c7e0fa72264cf66e11c9ce0",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d000048516c7e0fa72264cf66e11c9ce0",
+                "width": 64
+              }
+            ],
+            "name": "Thank Your Lucky Stars",
+            "release_date": "2015-10-16",
+            "release_date_precision": "day",
+            "total_tracks": 9,
+            "type": "album",
+            "uri": "spotify:album:30XWJAQWUvARp2qPmJwbhj"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+              },
+              "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+              "id": "56ZTgzPBDge0OvCGgMO3OY",
+              "name": "Beach House",
+              "type": "artist",
+              "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+            }
+          ],
+          "available_markets": [
+            "AU",
+            "NZ"
+          ],
+          "disc_number": 1,
+          "duration_ms": 262133,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "AUVB01500023"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0Nl76n8sAN754FjtReNHNO"
+          },
+          "href": "https://api.spotify.com/v1/tracks/0Nl76n8sAN754FjtReNHNO",
+          "id": "0Nl76n8sAN754FjtReNHNO",
+          "is_local": false,
+          "name": "She's So Lovely",
+          "popularity": 21,
+          "preview_url": null,
+          "track": true,
+          "track_number": 2,
+          "type": "track",
+          "uri": "spotify:track:0Nl76n8sAN754FjtReNHNO"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:02:34Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+                },
+                "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+                "id": "56ZTgzPBDge0OvCGgMO3OY",
+                "name": "Beach House",
+                "type": "artist",
+                "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+              }
+            ],
+            "available_markets": [
+              "AU",
+              "NZ"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/30XWJAQWUvARp2qPmJwbhj"
+            },
+            "href": "https://api.spotify.com/v1/albums/30XWJAQWUvARp2qPmJwbhj",
+            "id": "30XWJAQWUvARp2qPmJwbhj",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b2736c7e0fa72264cf66e11c9ce0",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e026c7e0fa72264cf66e11c9ce0",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d000048516c7e0fa72264cf66e11c9ce0",
+                "width": 64
+              }
+            ],
+            "name": "Thank Your Lucky Stars",
+            "release_date": "2015-10-16",
+            "release_date_precision": "day",
+            "total_tracks": 9,
+            "type": "album",
+            "uri": "spotify:album:30XWJAQWUvARp2qPmJwbhj"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+              },
+              "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+              "id": "56ZTgzPBDge0OvCGgMO3OY",
+              "name": "Beach House",
+              "type": "artist",
+              "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+            }
+          ],
+          "available_markets": [
+            "AU",
+            "NZ"
+          ],
+          "disc_number": 1,
+          "duration_ms": 228253,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "AUVB01500024"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/58MKvefPRWeayRkLd7l51r"
+          },
+          "href": "https://api.spotify.com/v1/tracks/58MKvefPRWeayRkLd7l51r",
+          "id": "58MKvefPRWeayRkLd7l51r",
+          "is_local": false,
+          "name": "All Your Yeahs",
+          "popularity": 22,
+          "preview_url": null,
+          "track": true,
+          "track_number": 3,
+          "type": "track",
+          "uri": "spotify:track:58MKvefPRWeayRkLd7l51r"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:02:34Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+                },
+                "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+                "id": "56ZTgzPBDge0OvCGgMO3OY",
+                "name": "Beach House",
+                "type": "artist",
+                "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+              }
+            ],
+            "available_markets": [
+              "AU",
+              "NZ"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/30XWJAQWUvARp2qPmJwbhj"
+            },
+            "href": "https://api.spotify.com/v1/albums/30XWJAQWUvARp2qPmJwbhj",
+            "id": "30XWJAQWUvARp2qPmJwbhj",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b2736c7e0fa72264cf66e11c9ce0",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e026c7e0fa72264cf66e11c9ce0",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d000048516c7e0fa72264cf66e11c9ce0",
+                "width": 64
+              }
+            ],
+            "name": "Thank Your Lucky Stars",
+            "release_date": "2015-10-16",
+            "release_date_precision": "day",
+            "total_tracks": 9,
+            "type": "album",
+            "uri": "spotify:album:30XWJAQWUvARp2qPmJwbhj"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+              },
+              "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+              "id": "56ZTgzPBDge0OvCGgMO3OY",
+              "name": "Beach House",
+              "type": "artist",
+              "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+            }
+          ],
+          "available_markets": [
+            "AU",
+            "NZ"
+          ],
+          "disc_number": 1,
+          "duration_ms": 335706,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "AUVB01500025"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3LjciwG1IAuDRZZ7V0GPQ6"
+          },
+          "href": "https://api.spotify.com/v1/tracks/3LjciwG1IAuDRZZ7V0GPQ6",
+          "id": "3LjciwG1IAuDRZZ7V0GPQ6",
+          "is_local": false,
+          "name": "One Thing",
+          "popularity": 12,
+          "preview_url": null,
+          "track": true,
+          "track_number": 4,
+          "type": "track",
+          "uri": "spotify:track:3LjciwG1IAuDRZZ7V0GPQ6"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:02:34Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+                },
+                "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+                "id": "56ZTgzPBDge0OvCGgMO3OY",
+                "name": "Beach House",
+                "type": "artist",
+                "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+              }
+            ],
+            "available_markets": [
+              "AU",
+              "NZ"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/30XWJAQWUvARp2qPmJwbhj"
+            },
+            "href": "https://api.spotify.com/v1/albums/30XWJAQWUvARp2qPmJwbhj",
+            "id": "30XWJAQWUvARp2qPmJwbhj",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b2736c7e0fa72264cf66e11c9ce0",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e026c7e0fa72264cf66e11c9ce0",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d000048516c7e0fa72264cf66e11c9ce0",
+                "width": 64
+              }
+            ],
+            "name": "Thank Your Lucky Stars",
+            "release_date": "2015-10-16",
+            "release_date_precision": "day",
+            "total_tracks": 9,
+            "type": "album",
+            "uri": "spotify:album:30XWJAQWUvARp2qPmJwbhj"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+              },
+              "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+              "id": "56ZTgzPBDge0OvCGgMO3OY",
+              "name": "Beach House",
+              "type": "artist",
+              "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+            }
+          ],
+          "available_markets": [
+            "AU",
+            "NZ"
+          ],
+          "disc_number": 1,
+          "duration_ms": 187546,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "AUVB01500026"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/08Bo1xWEq83CXlEs127Gg0"
+          },
+          "href": "https://api.spotify.com/v1/tracks/08Bo1xWEq83CXlEs127Gg0",
+          "id": "08Bo1xWEq83CXlEs127Gg0",
+          "is_local": false,
+          "name": "Common Girl",
+          "popularity": 11,
+          "preview_url": null,
+          "track": true,
+          "track_number": 5,
+          "type": "track",
+          "uri": "spotify:track:08Bo1xWEq83CXlEs127Gg0"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:02:34Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+                },
+                "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+                "id": "56ZTgzPBDge0OvCGgMO3OY",
+                "name": "Beach House",
+                "type": "artist",
+                "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+              }
+            ],
+            "available_markets": [
+              "AU",
+              "NZ"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/30XWJAQWUvARp2qPmJwbhj"
+            },
+            "href": "https://api.spotify.com/v1/albums/30XWJAQWUvARp2qPmJwbhj",
+            "id": "30XWJAQWUvARp2qPmJwbhj",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b2736c7e0fa72264cf66e11c9ce0",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e026c7e0fa72264cf66e11c9ce0",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d000048516c7e0fa72264cf66e11c9ce0",
+                "width": 64
+              }
+            ],
+            "name": "Thank Your Lucky Stars",
+            "release_date": "2015-10-16",
+            "release_date_precision": "day",
+            "total_tracks": 9,
+            "type": "album",
+            "uri": "spotify:album:30XWJAQWUvARp2qPmJwbhj"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+              },
+              "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+              "id": "56ZTgzPBDge0OvCGgMO3OY",
+              "name": "Beach House",
+              "type": "artist",
+              "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+            }
+          ],
+          "available_markets": [
+            "AU",
+            "NZ"
+          ],
+          "disc_number": 1,
+          "duration_ms": 243813,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "AUVB01500027"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/46384QPdQfXSiJJqYg3q6l"
+          },
+          "href": "https://api.spotify.com/v1/tracks/46384QPdQfXSiJJqYg3q6l",
+          "id": "46384QPdQfXSiJJqYg3q6l",
+          "is_local": false,
+          "name": "The Traveller",
+          "popularity": 13,
+          "preview_url": null,
+          "track": true,
+          "track_number": 6,
+          "type": "track",
+          "uri": "spotify:track:46384QPdQfXSiJJqYg3q6l"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:02:34Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+                },
+                "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+                "id": "56ZTgzPBDge0OvCGgMO3OY",
+                "name": "Beach House",
+                "type": "artist",
+                "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+              }
+            ],
+            "available_markets": [
+              "AU",
+              "NZ"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/30XWJAQWUvARp2qPmJwbhj"
+            },
+            "href": "https://api.spotify.com/v1/albums/30XWJAQWUvARp2qPmJwbhj",
+            "id": "30XWJAQWUvARp2qPmJwbhj",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b2736c7e0fa72264cf66e11c9ce0",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e026c7e0fa72264cf66e11c9ce0",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d000048516c7e0fa72264cf66e11c9ce0",
+                "width": 64
+              }
+            ],
+            "name": "Thank Your Lucky Stars",
+            "release_date": "2015-10-16",
+            "release_date_precision": "day",
+            "total_tracks": 9,
+            "type": "album",
+            "uri": "spotify:album:30XWJAQWUvARp2qPmJwbhj"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+              },
+              "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+              "id": "56ZTgzPBDge0OvCGgMO3OY",
+              "name": "Beach House",
+              "type": "artist",
+              "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+            }
+          ],
+          "available_markets": [
+            "AU",
+            "NZ"
+          ],
+          "disc_number": 1,
+          "duration_ms": 389760,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "AUVB01500028"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0gPI9DwCCfcj7L7EjUiOz2"
+          },
+          "href": "https://api.spotify.com/v1/tracks/0gPI9DwCCfcj7L7EjUiOz2",
+          "id": "0gPI9DwCCfcj7L7EjUiOz2",
+          "is_local": false,
+          "name": "Elegy To The Void",
+          "popularity": 17,
+          "preview_url": null,
+          "track": true,
+          "track_number": 7,
+          "type": "track",
+          "uri": "spotify:track:0gPI9DwCCfcj7L7EjUiOz2"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:02:34Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+                },
+                "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+                "id": "56ZTgzPBDge0OvCGgMO3OY",
+                "name": "Beach House",
+                "type": "artist",
+                "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+              }
+            ],
+            "available_markets": [
+              "AU",
+              "NZ"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/30XWJAQWUvARp2qPmJwbhj"
+            },
+            "href": "https://api.spotify.com/v1/albums/30XWJAQWUvARp2qPmJwbhj",
+            "id": "30XWJAQWUvARp2qPmJwbhj",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b2736c7e0fa72264cf66e11c9ce0",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e026c7e0fa72264cf66e11c9ce0",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d000048516c7e0fa72264cf66e11c9ce0",
+                "width": 64
+              }
+            ],
+            "name": "Thank Your Lucky Stars",
+            "release_date": "2015-10-16",
+            "release_date_precision": "day",
+            "total_tracks": 9,
+            "type": "album",
+            "uri": "spotify:album:30XWJAQWUvARp2qPmJwbhj"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+              },
+              "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+              "id": "56ZTgzPBDge0OvCGgMO3OY",
+              "name": "Beach House",
+              "type": "artist",
+              "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+            }
+          ],
+          "available_markets": [
+            "AU",
+            "NZ"
+          ],
+          "disc_number": 1,
+          "duration_ms": 314840,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "AUVB01500029"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6oQh1Oj6sjl5hpRrx9b1uK"
+          },
+          "href": "https://api.spotify.com/v1/tracks/6oQh1Oj6sjl5hpRrx9b1uK",
+          "id": "6oQh1Oj6sjl5hpRrx9b1uK",
+          "is_local": false,
+          "name": "Rough Song",
+          "popularity": 14,
+          "preview_url": null,
+          "track": true,
+          "track_number": 8,
+          "type": "track",
+          "uri": "spotify:track:6oQh1Oj6sjl5hpRrx9b1uK"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2020-02-14T07:02:34Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/1178309119"
+          },
+          "href": "https://api.spotify.com/v1/users/1178309119",
+          "id": "1178309119",
+          "type": "user",
+          "uri": "spotify:user:1178309119"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+                },
+                "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+                "id": "56ZTgzPBDge0OvCGgMO3OY",
+                "name": "Beach House",
+                "type": "artist",
+                "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+              }
+            ],
+            "available_markets": [
+              "AU",
+              "NZ"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/30XWJAQWUvARp2qPmJwbhj"
+            },
+            "href": "https://api.spotify.com/v1/albums/30XWJAQWUvARp2qPmJwbhj",
+            "id": "30XWJAQWUvARp2qPmJwbhj",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b2736c7e0fa72264cf66e11c9ce0",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e026c7e0fa72264cf66e11c9ce0",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d000048516c7e0fa72264cf66e11c9ce0",
+                "width": 64
+              }
+            ],
+            "name": "Thank Your Lucky Stars",
+            "release_date": "2015-10-16",
+            "release_date_precision": "day",
+            "total_tracks": 9,
+            "type": "album",
+            "uri": "spotify:album:30XWJAQWUvARp2qPmJwbhj"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/56ZTgzPBDge0OvCGgMO3OY"
+              },
+              "href": "https://api.spotify.com/v1/artists/56ZTgzPBDge0OvCGgMO3OY",
+              "id": "56ZTgzPBDge0OvCGgMO3OY",
+              "name": "Beach House",
+              "type": "artist",
+              "uri": "spotify:artist:56ZTgzPBDge0OvCGgMO3OY"
+            }
+          ],
+          "available_markets": [
+            "AU",
+            "NZ"
+          ],
+          "disc_number": 1,
+          "duration_ms": 253960,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "AUVB01500030"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7nhRj00VECtl9AqbyyaYlS"
+          },
+          "href": "https://api.spotify.com/v1/tracks/7nhRj00VECtl9AqbyyaYlS",
+          "id": "7nhRj00VECtl9AqbyyaYlS",
+          "is_local": false,
+          "name": "Somewhere Tonight",
+          "popularity": 22,
+          "preview_url": null,
+          "track": true,
+          "track_number": 9,
+          "type": "track",
+          "uri": "spotify:track:7nhRj00VECtl9AqbyyaYlS"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      }
+    ],
+    "limit": 100,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 20
+  },
+  "type": "playlist",
+  "uri": "spotify:playlist:0hXzW43N9IsskVZW6WlobW"
+}
