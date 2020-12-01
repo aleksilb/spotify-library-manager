@@ -1,0 +1,10 @@
+{
+  "external_urls": {
+    "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+  },
+  "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+  "id": "0gOsZcHl7H3ewXVIEnWFZX",
+  "name": "Camille",
+  "type": "artist",
+  "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+}

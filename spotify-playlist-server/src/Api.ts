@@ -9,7 +9,7 @@ app.get('/playlist/user/:userId', (req, res) => {
 })
 
 app.get('/playlist/:playlistId', (req, res) => {
-    res.send(Playlist.getPlaylist(req.params.playlistId));
+    res.send(Playlist.getPlaylist(req.params.playlistId, true));
 });
 
 app.listen(port, () => {
