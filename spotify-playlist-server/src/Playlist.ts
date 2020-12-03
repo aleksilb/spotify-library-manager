@@ -29,7 +29,7 @@ export function getTrack(spotifyTrack : SpotifyModel.Track) : Track {
     let album = getAlbum(spotifyTrack.album);
     let track = Database.getTrack(spotifyTrack.id);
     if (track == null) {
-        track = Services.getTrack(spotifyTrack, artists[0]);
+        track = Services.getTrack({spotifyTrack : spotifyTrack, artists : artists});
         Database.saveTrack(track);
     }
     track.artists = artists;
@@ -40,7 +40,7 @@ export function getTrack(spotifyTrack : SpotifyModel.Track) : Track {
 export function getAlbum(spotifyAlbum : SpotifyModel.Album) : Album {
     let album = Database.getAlbum(spotifyAlbum.id);
     if(album == null) {
-        album = Services.getAlbum(spotifyAlbum);
+        album = Services.getAlbum({spotifyAlbum : spotifyAlbum});
         Database.saveAlbum(album);
     }
     return album;
@@ -49,7 +49,7 @@ export function getAlbum(spotifyAlbum : SpotifyModel.Album) : Album {
 export function getArtist(spotifyArtist : SpotifyModel.Artist) : Artist {
     let artist = Database.getArtist(spotifyArtist.id);
     if(artist == null) {
-        artist = Services.getArtist(spotifyArtist);
+        artist = Services.getArtist({spotifyArtist : spotifyArtist});
         Database.saveArtist(artist);
     }
     return artist;

@@ -1,19 +1,19 @@
 import Artist from "./model/Artist";
-import * as SpotifyModel from "./model/interfaces/spotify";
 import * as MusicBrainz from "./service/MusicBrainz";
 import * as Mapping from "./Mapping";
 import Track from "./model/Track";
 import Album from "./model/Album";
+import {AlbumContext, ArtistContext, TrackContext} from "./model/interfaces/context";
 
-export function getAlbum(spotifyAlbum: SpotifyModel.Album) : Album {
-    return Mapping.createAlbum(spotifyAlbum);
+export function getAlbum(context : AlbumContext) : Album {
+    return Mapping.createAlbum(context);
 }
 
-export function getTrack(spotifyTrack : SpotifyModel.Track, artist : Artist) : Track {
-    return Mapping.createTrack(spotifyTrack, artist);
+export function getTrack(context : TrackContext) : Track {
+    return Mapping.createTrack(context);
 }
 
-export function getArtist(spotifyArtist : SpotifyModel.Artist) : Artist {
-    let mbArtist = MusicBrainz.searchArtist(spotifyArtist);
-    return Mapping.createArtist(spotifyArtist, mbArtist);
+export function getArtist(context : ArtistContext) : Artist {
+    context.musicBrainzArtist = MusicBrainz.searchArtist(context.spotifyArtist);
+    return Mapping.createArtist(context);
 }

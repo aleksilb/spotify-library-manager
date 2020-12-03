@@ -1,17 +1,16 @@
-import * as Spotify from "./model/interfaces/spotify";
-import * as MB from "./model/interfaces/music_brainz";
 import Track from "./model/Track";
 import Album from "./model/Album";
 import Artist from "./model/Artist";
+import {AlbumContext, ArtistContext, TrackContext} from "./model/interfaces/context";
 
-export function createTrack(spotifyTrack: Spotify.Track, artist : Artist) : Track {
-    return new Track(spotifyTrack.id, spotifyTrack.name, artist.country);
+export function createTrack(context : TrackContext) : Track {
+    return new Track(context.spotifyTrack.id, context.spotifyTrack.name, context.artists[0].country);
 }
 
-export function createAlbum(spotifyAlbum : Spotify.Album) : Album {
-    return new Album(spotifyAlbum.id, spotifyAlbum.name);
+export function createAlbum(context : AlbumContext) : Album {
+    return new Album(context.spotifyAlbum.id, context.spotifyAlbum.name);
 }
 
-export function createArtist(spotifyArtist : Spotify.Artist, mbArtist : MB.Artist) : Artist {
-    return new Artist(spotifyArtist.id, spotifyArtist.name, mbArtist.type, mbArtist.country);
+export function createArtist(context : ArtistContext) : Artist {
+    return new Artist(context.spotifyArtist.id, context.spotifyArtist.name, context.musicBrainzArtist.type, context.musicBrainzArtist.country);
 }
