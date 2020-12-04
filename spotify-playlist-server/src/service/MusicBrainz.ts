@@ -3,7 +3,16 @@ import * as MbModel from "../model/interfaces/music_brainz";
 
 export function searchArtist(spotifyArtist: SpotifyModel.Artist) : MbModel.Artist {
     if(spotifyArtist.id === '0gOsZcHl7H3ewXVIEnWFZX') {
-        return require("../../mock/music_brainz/artist_camille.json");
+        let result = require('../../mock/music_brainz/search_camille.json');
+        let bestScore = 0;
+        let choice = null;
+        result.artists.forEach(artist => {
+            if(artist.score > bestScore) {
+                choice = artist;
+                bestScore = artist.score;
+            }
+        });
+        return choice;
     } else {
         return null;
     }

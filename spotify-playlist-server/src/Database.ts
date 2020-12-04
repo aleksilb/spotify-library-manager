@@ -9,12 +9,20 @@ export function saveAlbum(album: Album) {
 }
 
 export function getAlbum(id: string) {
-    return null;
+    if(id === '18LlCAG2iY8ht0dm7uKBy0') {
+        return require('../mock/album_oui.json')
+    } else {
+        return null;
+    }
 }
 
 
 export function getTrack(id : string) : Track {
-    return null;
+    if(id === '26tVbVkCppuEgNSQRnIu1c') {
+        return require('../mock/track_sous_le_sable.json')
+    } else {
+        return null;
+    }
 }
 
 export function saveTrack(track : Track) {
