@@ -1,8 +1,8 @@
 import * as React from "react";
-import Track from "../classes/Track";
+import Track from "../model/Track";
 
 interface TrackBrowserProps {
-    tracks: Track[];
+    tracks ?: Track[];
 }
 
 export const TrackBrowser = ({tracks} : TrackBrowserProps) => {

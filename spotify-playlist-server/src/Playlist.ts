@@ -5,7 +5,7 @@ import Track from "./model/Track";
 import Artist from "./model/Artist";
 import * as Database from "./Database";
 import * as Services from "./Services";
-import Album from "./model/Album";
+import Album from './model/Album';
 
 export function getUserPlaylists(userName : string) : Playlist[] {
     let spotifyPlaylists = Spotify.getUserPlaylists(userName);

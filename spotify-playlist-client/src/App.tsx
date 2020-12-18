@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
-import { TrackBrowser } from './components/TrackBrowser';
 import { PlaylistBrowser } from './components/PlaylistBrowser';
-import Data from "./scripts/Data";
+import * as Api from './scripts/Api';
+import PlaylistView from "./components/PlaylistView";
 
 function App() {
-    const [tracks, setTracks] = useState(Data.getPlaylistTracks("mock-playlist"));
-    const [playlists, setPlaylists] = useState(Data.getUserPlaylists("mock-user"))
+    const [playlist, setPlaylist] = useState(Api.getPlaylist("mock-playlist"));
+    const [playlists, setPlaylists] = useState(Api.getUserPlaylists("mock-user"));
 
     const selectHandler = (playlistId:string) => {
-        setTracks(Data.getPlaylistTracks(playlistId));
+        setPlaylist(Api.getPlaylist(playlistId));
     }
 
     return <div className="App">
         <PlaylistBrowser playLists={playlists} selectHandler={selectHandler}/>
-        <TrackBrowser tracks={tracks}/>
+        <PlaylistView playlist={playlist} />
     </div>;
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Playlist from "../classes/Playlist";
+import Playlist from "../model/Playlist";
 
 interface PlaylistBrowserProps {
     playLists : Playlist[],
