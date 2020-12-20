@@ -13,29 +13,7 @@ export function getUserPlaylists(mockUser: string) : Playlist[] {
     ]
 }
 
-
-export function getPlaylist(id : string) : Playlist {
-    return {
-        'id':'playlist-id',
-        'name':'playlist name',
-        'tracks' : [
-            {
-                'id':'track-id',
-                'name':'Track name',
-                'country':'Track country',
-                'album' : {
-                    'id' : 'album-id',
-                    'name' : 'Album name'
-                },
-                'artists' : [
-                    {
-                        'id' : 'artist-id',
-                        'name' : 'Artist name',
-                        'type' : 'Artist type',
-                        'country' : 'Artist country'
-                    }
-                ]
-            }
-        ]
-    };
+export function getPlaylist(id : string) : Promise<Playlist> {
+    return fetch("http://localhost:3001/playlist/0hXzW43N9IsskVZW6WlobW")
+        .then(res => res.json());
 }

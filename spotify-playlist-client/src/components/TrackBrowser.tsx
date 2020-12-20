@@ -18,13 +18,13 @@ export const TrackBrowser = ({tracks} : TrackBrowserProps) => {
         </thead>
         <tbody>
         {tracks != null && tracks.map((track) => {
-            let artistNames = track.artists.map((artist) => {
+            let artistNames = track.artists != null ? track.artists.map((artist) => {
                 return artist.name;
-            });
+            }) : [];
             return <tr key={track.id}>
                 <td>{track.name}</td>
                 <td>{artistNames.join(', ')}</td>
-                <td>{track.album.name}</td>
+                <td>{track.album != null && track.album.name}</td>
             </tr>
             }
         )}
