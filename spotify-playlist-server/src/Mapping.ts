@@ -4,7 +4,7 @@ import Artist from "./model/Artist";
 import {AlbumContext, ArtistContext, TrackContext} from "./model/interfaces/context";
 
 export function createTrack(context : TrackContext) : Track {
-    return new Track(context.spotifyTrack.id, context.spotifyTrack.name, context.artists[0].country);
+    return new Track(context.spotifyTrack.id, context.spotifyTrack.name, context.album, context.artists, context.artists[0].country);
 }
 
 export function createAlbum(context : AlbumContext) : Album {

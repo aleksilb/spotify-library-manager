@@ -16,6 +16,7 @@ export function getPlaylist(id : string, withTracks : boolean) : Playlist {
     let spotifyPlaylist = Spotify.getPlaylist(id);
     let playlist = new Playlist(spotifyPlaylist.id, spotifyPlaylist.name);
     if(withTracks) {
+        playlist.tracks = [];
         spotifyPlaylist.tracks.items.forEach(spotifyTrack => {
             let track = getTrack(spotifyTrack.track);
             playlist.tracks.push(track);
@@ -29,11 +30,9 @@ export function getTrack(spotifyTrack : SpotifyModel.Track) : Track {
     let album = getAlbum(spotifyTrack.album);
     let track = Database.getTrack(spotifyTrack.id);
     if (track == null) {
-        track = Services.getTrack({spotifyTrack : spotifyTrack, artists : artists});
+        track = Services.getTrack({spotifyTrack : spotifyTrack, artists : artists, album : album});
         Database.saveTrack(track);
     }
-    track.artists = artists;
-    track.album = album;
     return track;
 }
 
