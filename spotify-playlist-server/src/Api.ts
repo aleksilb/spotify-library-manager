@@ -1,8 +1,10 @@
 import express = require("express");
+import cors = require('cors')
 import * as Playlist from "./Playlist"
 
 const app = express();
-const port = 3000;
+app.use(cors())
+const port = 3001;
 
 app.get('/playlist/user/:userId', (req, res) => {
     res.send(Playlist.getUserPlaylists(req.params.userId))
