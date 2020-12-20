@@ -1,0 +1,23 @@
+{
+  "id":"playlist-id",
+  "name":"playlist name",
+  "tracks" : [
+    {
+      "id":"track-id",
+      "name":"Track name",
+      "country":"Track country",
+      "album" : {
+        "id" : "album-id",
+        "name" : "Album name"
+      },
+      "artists" : [
+        {
+          "id" : "artist-id",
+          "name" : "Artist name",
+          "type" : "Artist type",
+          "country" : "Artist country"
+        }
+      ]
+    }
+  ]
+}
