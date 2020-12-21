@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { PlaylistBrowser } from './components/PlaylistBrowser';
 import * as Api from './scripts/Api';
 import PlaylistView from "./components/PlaylistView";
@@ -6,7 +6,13 @@ import Playlist from "./model/Playlist";
 
 function App() {
     const [playlist, setPlaylist] = useState<Playlist | undefined>(undefined);
-    const [playlists, setPlaylists] = useState(Api.getUserPlaylists("mock-user"));
+    const [playlists, setPlaylists] = useState<Playlist[]>([]);
+
+    useEffect(() => {
+        Api.getUserPlaylists("mock-user").then(playlists => {
+            setPlaylists(playlists);
+        })
+    }, []);
 
     const selectHandler = (playlistId:string) => {
         Api.getPlaylist(playlistId).then(playlist => {
@@ -15,7 +21,7 @@ function App() {
     }
 
     return <div className="App">
-        <PlaylistBrowser playLists={playlists} selectHandler={selectHandler}/>
+        <PlaylistBrowser playlists={playlists} selectHandler={selectHandler}/>
         <PlaylistView playlist={playlist} />
     </div>;
 }

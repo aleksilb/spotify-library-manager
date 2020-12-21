@@ -2,16 +2,18 @@ import React from 'react';
 import Playlist from "../model/Playlist";
 
 interface PlaylistBrowserProps {
-    playLists : Playlist[],
+    playlists : Playlist[],
     selectHandler : ((playlistId: string) => void)
 }
 
-export const PlaylistBrowser = ({playLists, selectHandler} : PlaylistBrowserProps) => {
+export const PlaylistBrowser = ({playlists, selectHandler} : PlaylistBrowserProps) => {
     return <div>
         <h2>Playlists</h2>
         <ul>
-        {playLists.map((playList) =>
-            <li key={playList.id} onClick={selectHandler.bind(null, playList.id)}>{playList.name}</li>)}
+        {playlists.map(playlist => {
+                if(playlist != null) return <li key={playlist.id} onClick={selectHandler.bind(null, playlist.id)}>{playlist.name}</li>
+            })
+        }
         </ul>
     </div>
 };
