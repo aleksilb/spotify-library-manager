@@ -14,6 +14,7 @@ export function getUserPlaylists(userName : string) : Playlist[] {
 
 export function getPlaylist(id : string, withTracks : boolean) : Playlist {
     let spotifyPlaylist = Spotify.getPlaylist(id);
+    if(spotifyPlaylist == null) return null;
     let playlist = new Playlist(spotifyPlaylist.id, spotifyPlaylist.name);
     if(withTracks) {
         playlist.tracks = [];

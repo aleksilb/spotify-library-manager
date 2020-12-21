@@ -1,10 +1,10 @@
 import * as Spotify from "../model/interfaces/spotify";
 
 export function getUserPlaylists(userName : string) : Spotify.Playlist[] {
-    if(userName === 'aleksi') {
+    if(userName === 'mock-user') {
         return require("../../mock/spotify/playlists_aleksi.json").items;
     } else {
-        return null;
+        return [];
     }
 }
 
