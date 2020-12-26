@@ -1,28 +1,28 @@
 import React, {useEffect, useState} from 'react';
-import { PlaylistBrowser } from './components/PlaylistBrowser';
-import * as Api from './scripts/Api';
-import PlaylistView from "./components/PlaylistView";
-import Playlist from "./model/Playlist";
+import PlaylistApp from "./PlaylistApp";
+import queryString from 'query-string';
+import Login from "./Login";
 
 function App() {
-    const [playlist, setPlaylist] = useState<Playlist | undefined>(undefined);
-    const [playlists, setPlaylists] = useState<Playlist[]>([]);
+    const [token, setToken] = useState<string | null>(null);
 
     useEffect(() => {
-        Api.getUserPlaylists("mock-user").then(playlists => {
-            setPlaylists(playlists);
-        })
+        let queryParams = queryString.parse(window.location.hash);
+        let accessToken = queryParams.access_token;
+        if(accessToken != null) {
+            if(accessToken instanceof Array) {
+                accessToken = accessToken[0];
+            }
+            console.log(accessToken);
+            setToken(accessToken);
+        }
     }, []);
 
-    const selectHandler = (playlistId:string) => {
-        Api.getPlaylist(playlistId).then(playlist => {
-            setPlaylist(playlist);
-        })
-    }
-
     return <div className="App">
-        <PlaylistBrowser playlists={playlists} selectHandler={selectHandler}/>
-        <PlaylistView playlist={playlist} />
+        {token == null ?
+            <Login /> :
+            <PlaylistApp token={token}/>
+        }
     </div>;
 }
 

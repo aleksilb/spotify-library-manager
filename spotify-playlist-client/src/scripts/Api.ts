@@ -1,7 +1,8 @@
 import Playlist from "../model/Playlist";
 
-export function getUserPlaylists(id: string) : Promise<Playlist[]> {
-    return fetch("http://localhost:3001/playlist/user/"+ id)
+export function getUserPlaylists(token ?: string) : Promise<Playlist[]> {
+    return fetch("http://localhost:3001/user-playlists", {
+        headers : {'authorization':'Bearer ' + token}})
         .then(res => res.json());
 }
 
