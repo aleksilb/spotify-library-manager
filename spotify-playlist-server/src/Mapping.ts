@@ -10,11 +10,11 @@ export function createPlaylist(spotifyPlaylist : Spotify.Playlist) : Playlist {
 }
 
 export function createTrack(context : TrackContext) : Track {
-    return new Track(context.spotifyTrack.id, context.spotifyTrack.name, context.album, context.artists, context.artists[0].country);
+    return new Track(context.spotifyTrack.id, context.spotifyTrack.name, context.album, context.artists, context.album.year, context.artists[0].country);
 }
 
 export function createAlbum(context : AlbumContext) : Album {
-    return new Album(context.spotifyAlbum.id, context.spotifyAlbum.name);
+    return new Album(context.spotifyAlbum.id, context.spotifyAlbum.name, parseInt(context.spotifyAlbum.release_date.substring(0,4)));
 }
 
 export function createArtist(context : ArtistContext) : Artist {
