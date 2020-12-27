@@ -1,9 +1,7 @@
-import Artist from "./model/Artist";
+import {Album, Artist, Track} from './model/interfaces';
 import * as MusicBrainz from "./service/MusicBrainz";
 import * as Mapping from "./Mapping";
-import Track from "./model/Track";
-import Album from "./model/Album";
-import {AlbumContext, ArtistContext, TrackContext} from "./model/interfaces/context";
+import {AlbumContext, ArtistContext, TrackContext} from "./model/context";
 
 export function getAlbum(context : AlbumContext) : Album {
     return Mapping.createAlbum(context);

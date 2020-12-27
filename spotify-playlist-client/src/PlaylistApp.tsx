@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import Playlist from "./model/Playlist";
+import {Playlist} from "./model/interfaces";
 import * as Api from "./scripts/Api";
 import {PlaylistBrowser} from "./components/PlaylistBrowser";
 import PlaylistView from "./components/PlaylistView";

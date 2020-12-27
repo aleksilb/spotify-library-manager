@@ -1,4 +1,4 @@
-import * as SpotifyModel from "../model/interfaces/spotify";
+import * as SpotifyModel from "../model/external/spotify";
 import {response} from "express";
 const fetch = require('node-fetch');
 

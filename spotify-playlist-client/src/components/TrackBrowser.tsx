@@ -1,5 +1,5 @@
 import * as React from "react";
-import Track from "../model/Track";
+import {Track} from "../model/interfaces";
 
 interface TrackBrowserProps {
     tracks ?: Track[];

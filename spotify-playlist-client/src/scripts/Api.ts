@@ -1,4 +1,4 @@
-import Playlist from "../model/Playlist";
+import {Playlist} from "../model/interfaces";
 
 export function getUserPlaylists(token ?: string) : Promise<Playlist[]> {
     return fetch("http://localhost:3001/user-playlists", {

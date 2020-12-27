@@ -1,12 +1,9 @@
-import Playlist from "./model/Playlist";
+import {Album, Artist, Playlist, Track} from './model/interfaces';
 import spotify from "./service/Spotify";
-import * as SpotifyModel from  "./model/interfaces/spotify";
+import * as SpotifyModel from "./model/external/spotify";
 import * as Mapping from "./Mapping";
-import Track from "./model/Track";
-import Artist from "./model/Artist";
 import * as Database from "./Database";
 import * as Services from "./Services";
-import Album from './model/Album';
 
 export function getUserPlaylists(authorization : string) : Promise<Playlist[]> {
     return spotify.getUserPlaylists(authorization)

@@ -1,5 +1,5 @@
-import * as SpotifyModel from "../model/interfaces/spotify";
-import * as MbModel from "../model/interfaces/music_brainz";
+import * as SpotifyModel from "../model/external/spotify";
+import * as MbModel from "../model/external/music_brainz";
 
 export function searchArtist(spotifyArtist: SpotifyModel.Artist) : MbModel.Artist {
     if(spotifyArtist.id === '0gOsZcHl7H3ewXVIEnWFZX') {

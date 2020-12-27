@@ -1,7 +1,5 @@
-import Artist from "./model/Artist";
+import {Album, Artist, Track} from './model/interfaces';
 import '../mock/artist_camille.json';
-import Track from "./model/Track";
-import Album from "./model/Album";
 
 export function saveAlbum(album: Album) {
     console.log("Saving album");
@@ -30,14 +28,14 @@ export function saveTrack(track : Track) {
     console.info(track);
 }
 
-export function getArtist(id:string):Artist {
+export function getArtist(id:string) : Artist {
     if(id === "56ZTgzPBDge0OvCGgMO3OY") {
         return require("../mock/artist_beach_house.json");
     }
     else return null;
 }
 
-export function saveArtist(artist:Artist) {
+export function saveArtist(artist : Artist) {
     console.log("Saving artist");
     console.info(artist);
 }

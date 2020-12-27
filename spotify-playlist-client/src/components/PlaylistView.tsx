@@ -1,5 +1,5 @@
 import React from 'react';
-import Playlist from "../model/Playlist";
+import {Playlist} from "../model/interfaces";
 import {TrackBrowser} from "./TrackBrowser";
 
 interface PlaylistProps {
