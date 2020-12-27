@@ -18,5 +18,7 @@ export function createAlbum(context : AlbumContext) : Album {
 }
 
 export function createArtist(context : ArtistContext) : Artist {
-    return new Artist(context.spotifyArtist.id, context.spotifyArtist.name, context.musicBrainzArtist.type, context.musicBrainzArtist.country);
+    const type = (context.musicBrainzArtist != null) ? context.musicBrainzArtist.type : null;
+    const country = (context.musicBrainzArtist != null) ? context.musicBrainzArtist.country : null;
+    return new Artist(context.spotifyArtist.id, context.spotifyArtist.name, type, country);
 }
