@@ -7,6 +7,6 @@ export function getUserPlaylists(token ?: string) : Promise<Playlist[]> {
 }
 
 export function getPlaylist(id : string) : Promise<Playlist> {
-    return fetch("http://localhost:3001/playlist/0hXzW43N9IsskVZW6WlobW")
+    return fetch("http://localhost:3001/playlist/" + id)
         .then(res => res.json());
 }
