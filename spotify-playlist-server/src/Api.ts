@@ -6,15 +6,17 @@ const app = express();
 app.use(cors())
 const port = 3001;
 
-app.get('/playlist/user/:userId', (req, res) => {
+app.get('/user-playlists', (req, res) => {
     Playlist.getUserPlaylists(req.header('authorization'))
         .then(playlists => res.send(playlists));
 })
 
 app.get('/playlist/:playlistId', (req, res) => {
-    res.send(Playlist.getPlaylist(req.params.playlistId));
+    Playlist.getPlaylist(req.params.playlistId).then(
+        playlist => res.send(playlist)
+    );
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`Listening at http://localhost:${port}`)
 })

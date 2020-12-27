@@ -1,19 +1,50 @@
-import * as Spotify from "../model/interfaces/spotify";
+import * as SpotifyModel from "../model/interfaces/spotify";
+import {response} from "express";
 const fetch = require('node-fetch');
 
-export function getUserPlaylists(authorization : string) : Promise<Spotify.Playlist[]> {
-    return fetch('https://api.spotify.com/v1/me/playlists', {
-        headers : {'authorization' : authorization}
-    }).then(response =>
-        response.json())
-    .then(response =>
-        response.items);
-}
+class Spotify {
+    private static token : Promise<string>;
+    private static clientId: string = '5be0cbaaf98842f8bd292fca6a502b81';
+    private static clientSecret: string = '6818277bd0c44514bd8e75fcbdcb18f3';
 
-export function getPlaylist(id : string) : Spotify.Playlist {
-    if(id === '0hXzW43N9IsskVZW6WlobW') {
-        return require("../../mock/spotify/playlist_1.json");
-    } else {
-        return null;
+    static fetchToken() : Promise<string> {
+        return fetch('https://accounts.spotify.com/api/token', {
+            method : 'POST',
+            body : new URLSearchParams({
+                'grant_type': 'client_credentials'
+            }),
+            headers : {'authorization' : 'Basic ' + Buffer.from(this.clientId + ":" + this.clientSecret).toString('base64')}
+        })
+            .then(response =>
+                response.json())
+            .then(
+                response => response.access_token);
+    }
+
+    static getToken() : Promise<string> {
+        if(this.token == null) {
+            this.token = this.fetchToken();
+        }
+        return this.token;
+    }
+
+    static getUserPlaylists(authorization : string) : Promise<SpotifyModel.Playlist[]> {
+        return fetch('https://api.spotify.com/v1/me/playlists', {
+            headers : {'authorization' : authorization}
+        })
+        .then(response =>
+            response.json())
+        .then(response =>
+            response.items);
+    }
+
+    static getPlaylist(id : string) : Promise<SpotifyModel.Playlist> {
+        return this.getToken().then(token => {
+            return fetch('https://api.spotify.com/v1/playlists/' + id, {
+                headers : {'authorization' : 'Bearer ' + token}
+            }).then(response => response.json());
+        })
     }
 }
+
+export default Spotify;
