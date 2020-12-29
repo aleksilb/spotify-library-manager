@@ -5,16 +5,21 @@ import * as Mapping from "./Mapping";
 import * as Database from "./Database";
 import * as Services from "./Services";
 
-let artistPromiseCache : {[key : string] : Promise<Artist>} = {};
+let artistPromiseCache: { [key: string]: Promise<Artist> } = {};
 
-export function getUserPlaylists(authorization : string) : Promise<Playlist[]> {
+export function getUserPlaylists(authorization: string): Promise<Playlist[]> {
     return spotify.getUserPlaylists(authorization)
         .then(spotifyPlaylists =>
             spotifyPlaylists.map(spotifyPlaylist =>
-                Mapping.createPlaylist(spotifyPlaylist)));
+                Mapping.createPlaylist(spotifyPlaylist)))
+        .catch(error => {
+            console.error("Failed to get user playlists with authorization " + authorization);
+            console.error(error);
+            return [];
+        });
 }
 
-export function getPlaylist(id : string) : Promise<Playlist> {
+export function getPlaylist(id: string): Promise<Playlist> {
     return spotify.getPlaylist(id)
         .then(spotifyPlaylist => {
             let playlist = Mapping.createPlaylist(spotifyPlaylist);
@@ -23,11 +28,16 @@ export function getPlaylist(id : string) : Promise<Playlist> {
         }).then(([playlist, tracks]) => {
             playlist.tracks = tracks;
             return playlist;
+        }).catch(error => {
+            console.error("Failed to get playlist " + id);
+            console.error(error);
+            return null;
         });
 }
 
-export function getTrack(spotifyTrack : SpotifyModel.Track) : Promise<Track> {
-    return Database.getTrack(spotifyTrack.id).then(track => {
+export function getTrack(spotifyTrack: SpotifyModel.Track): Promise<Track> {
+    return Database.getTrack(spotifyTrack.id)
+        .then(track => {
             if (track != null) {
                 return track;
             } else {
@@ -39,36 +49,47 @@ export function getTrack(spotifyTrack : SpotifyModel.Track) : Promise<Track> {
                     return trackPromise;
                 });
             }
+        }).catch(error => {
+            console.error("Failed to get track " + spotifyTrack.id);
+            console.error(error);
+            return null;
         });
 }
 
-export function getAlbum(spotifyAlbum : SpotifyModel.Album) : Promise<Album> {
-    return Database.getAlbum(spotifyAlbum.id).then(album => {
-        if(album != null) {
-            return album;
-        } else {
-            let albumPromise = Services.getAlbum({spotifyAlbum : spotifyAlbum});
-            Database.saveAlbum(albumPromise);
-            return albumPromise;
-        }
-    })
-
-
+export function getAlbum(spotifyAlbum: SpotifyModel.Album): Promise<Album> {
+    return Database.getAlbum(spotifyAlbum.id)
+        .then(album => {
+            if (album != null) {
+                return album;
+            } else {
+                let albumPromise = Services.getAlbum({spotifyAlbum: spotifyAlbum});
+                Database.saveAlbum(albumPromise);
+                return albumPromise;
+            }
+        }).catch(error => {
+            console.error("Failed to get album " + spotifyAlbum.id);
+            console.error(error);
+            return null;
+        });
 }
 
-export function getArtist(spotifyArtist : SpotifyModel.Artist) : Promise<Artist> {
+export function getArtist(spotifyArtist: SpotifyModel.Artist): Promise<Artist> {
     let id = spotifyArtist.id;
     return Database.getArtist(id)
         .then(artist => {
-            if(artist != null) {
+            if (artist != null) {
                 return artist;
-            } else if(artistPromiseCache.hasOwnProperty(id)) {
+            } else if (artistPromiseCache.hasOwnProperty(id)) {
                 return artistPromiseCache[id];
             } else {
-                const artistPromise = Services.getArtist({spotifyArtist : spotifyArtist});
+                const artistPromise = Services.getArtist({spotifyArtist: spotifyArtist});
                 artistPromiseCache[id] = artistPromise;
                 Database.saveArtist(artistPromise);
                 return artistPromise;
             }
+        }).catch(error => {
+            console.error("Failed to get artist " + id);
+            console.error(error);
+            return null;
         });
 }

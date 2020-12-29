@@ -8,19 +8,24 @@ export class MusicBrainz {
         appContactInfo: 'aleksi.lindblad@gmail.com'
     });
 
-    static searchArtist(spotifyArtist: SpotifyModel.Artist) : Promise<IArtist> {
-        return this.api.searchArtist( {artist : spotifyArtist.name}).then(artistResults => {
-            let bestScore = 0;
-            let choice : IArtist = null;
+    static searchArtist(spotifyArtist: SpotifyModel.Artist): Promise<IArtist> {
+        return this.api.searchArtist({artist: spotifyArtist.name})
+            .then(artistResults => {
+                let bestScore = 0;
+                let choice: IArtist = null;
 
-            artistResults.artists.forEach(artist => {
-                if(artist.score > bestScore) {
-                    choice = artist;
-                    bestScore = artist.score;
-                }
+                artistResults.artists.forEach(artist => {
+                    if (artist.score > bestScore) {
+                        choice = artist;
+                        bestScore = artist.score;
+                    }
+                });
+
+                return choice;
+            }).catch(error => {
+                console.error("Failed to get artist " + spotifyArtist.name + " data from MusicBrainz");
+                console.error(error);
+                return null;
             });
-
-            return choice;
-        }).catch();
     }
 }
