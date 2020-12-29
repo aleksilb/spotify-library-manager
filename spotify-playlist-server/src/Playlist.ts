@@ -5,6 +5,8 @@ import * as Mapping from "./Mapping";
 import * as Database from "./Database";
 import * as Services from "./Services";
 
+let artistPromiseCache : {[key : string] : Promise<Artist>} = {};
+
 export function getUserPlaylists(authorization : string) : Promise<Playlist[]> {
     return spotify.getUserPlaylists(authorization)
         .then(spotifyPlaylists =>
@@ -15,26 +17,33 @@ export function getUserPlaylists(authorization : string) : Promise<Playlist[]> {
 export function getPlaylist(id : string) : Promise<Playlist> {
     return spotify.getPlaylist(id)
         .then(spotifyPlaylist => {
-            if(spotifyPlaylist == null) return null;
             let playlist = Mapping.createPlaylist(spotifyPlaylist);
-            playlist.tracks = [];
-            spotifyPlaylist.tracks.items.forEach(spotifyTrack => {
-                let track = getTrack(spotifyTrack.track);
-                playlist.tracks.push(track);
+            let trackPromises : Promise<Track>[] = spotifyPlaylist.tracks.items.map(spotifyTrack => {
+                return getTrack(spotifyTrack.track)
             });
-            return playlist;
-        });
+            return Promise.all(trackPromises).then(tracks => {
+                playlist.tracks = tracks;
+                return playlist;
+            });
+        })
 }
 
-export function getTrack(spotifyTrack : SpotifyModel.Track) : Track {
-    let artists = spotifyTrack.artists.map(artist => getArtist(artist));
-    let album = getAlbum(spotifyTrack.album);
-    let track = Database.getTrack(spotifyTrack.id);
-    if (track == null) {
-        track = Services.getTrack({spotifyTrack : spotifyTrack, artists : artists, album : album});
-        Database.saveTrack(track);
-    }
-    return track;
+export function getTrack(spotifyTrack : SpotifyModel.Track) : Promise<Track> {
+    return Database.getTrack(spotifyTrack.id).then(track => {
+            if (track != null) {
+                return track;
+            } else {
+                let artists: Promise<Artist>[] = spotifyTrack.artists.map(artist => getArtist(artist));
+                return Promise.all(artists).then(artists => {
+                    let album = getAlbum(spotifyTrack.album);
+                    let trackPromise = Services.getTrack({spotifyTrack: spotifyTrack, artists: artists, album: album});
+                    Database.saveTrack(trackPromise);
+                    return trackPromise;
+                });
+            }
+        }).then(track => {
+            return track
+    });
 }
 
 export function getAlbum(spotifyAlbum : SpotifyModel.Album) : Album {
@@ -46,11 +55,19 @@ export function getAlbum(spotifyAlbum : SpotifyModel.Album) : Album {
     return album;
 }
 
-export function getArtist(spotifyArtist : SpotifyModel.Artist) : Artist {
-    let artist = Database.getArtist(spotifyArtist.id);
-    if(artist == null) {
-        artist = Services.getArtist({spotifyArtist : spotifyArtist});
-        Database.saveArtist(artist);
-    }
-    return artist;
+export function getArtist(spotifyArtist : SpotifyModel.Artist) : Promise<Artist> {
+    let id = spotifyArtist.id;
+    return Database.getArtist(id)
+        .then(artist => {
+            if(artist != null) {
+                return new Promise((resolve) => resolve(artist));
+            } else if(artistPromiseCache.hasOwnProperty(id)) {
+                return artistPromiseCache[id];
+            } else {
+                const artistPromise = Services.getArtist({spotifyArtist : spotifyArtist});
+                artistPromiseCache[id] = artistPromise;
+                Database.saveArtist(spotifyArtist.id, artistPromise);
+                return artistPromise;
+            }
+        });
 }

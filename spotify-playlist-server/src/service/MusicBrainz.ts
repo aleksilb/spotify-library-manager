@@ -1,19 +1,26 @@
 import * as SpotifyModel from "../model/external/spotify";
-import * as MbModel from "../model/external/music_brainz";
+import {IArtist, MusicBrainzApi} from 'musicbrainz-api';
 
-export function searchArtist(spotifyArtist: SpotifyModel.Artist) : MbModel.Artist {
-    if(spotifyArtist.id === '0gOsZcHl7H3ewXVIEnWFZX') {
-        let result = require('../../mock/music_brainz/search_camille.json');
-        let bestScore = 0;
-        let choice = null;
-        result.artists.forEach(artist => {
-            if(artist.score > bestScore) {
-                choice = artist;
-                bestScore = artist.score;
-            }
+export class MusicBrainz {
+    private static api = new MusicBrainzApi({
+        appName: 'spotify-playlist',
+        appVersion: '0.1.0',
+        appContactInfo: 'aleksi.lindblad@gmail.com'
+    });
+
+    static searchArtist(spotifyArtist: SpotifyModel.Artist) : Promise<IArtist> {
+        return this.api.searchArtist( {artist : spotifyArtist.name}).then(artistResults => {
+            let bestScore = 0;
+            let choice : IArtist;
+
+            artistResults.artists.forEach(artist => {
+                if(artist.score > bestScore) {
+                    choice = artist;
+                    bestScore = artist.score;
+                }
+            });
+
+            return choice;
         });
-        return choice;
-    } else {
-        return null;
     }
 }

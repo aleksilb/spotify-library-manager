@@ -1,6 +1,8 @@
 import {Album, Artist, Track} from './model/interfaces';
 import '../mock/artist_camille.json';
 
+
+
 export function saveAlbum(album: Album) {
     console.log("Saving album");
     console.info(album);
@@ -15,27 +17,26 @@ export function getAlbum(id: string) {
 }
 
 
-export function getTrack(id : string) : Track {
-    if(id === '26tVbVkCppuEgNSQRnIu1c') {
-        return require('../mock/track_sous_le_sable.json')
+export function getTrack(id : string) : Promise<Track> {
+    if(id === "26tVbVkCppuEgNSQRnIu1c") {
+        return new Promise((resolve) => resolve(require('../mock/track_sous_le_sable.json')));
     } else {
-        return null;
+        return new Promise((resolve) => resolve(null));
     }
 }
 
-export function saveTrack(track : Track) {
+export function saveTrack(track : Promise<Track>) {
     console.log("Saving track");
-    console.info(track);
 }
 
-export function getArtist(id:string) : Artist {
+export function getArtist(id : string) : Promise<Artist> {
     if(id === "56ZTgzPBDge0OvCGgMO3OY") {
-        return require("../mock/artist_beach_house.json");
+        return new Promise((resolve) => resolve(require("../mock/artist_beach_house.json")));
+    } else {
+        return new Promise((resolve) => resolve(null));
     }
-    else return null;
 }
 
-export function saveArtist(artist : Artist) {
-    console.log("Saving artist");
-    console.info(artist);
+export function saveArtist(id : string, artistPromise : Promise<Artist>) {
+    console.log("Saving artist " + id);
 }
