@@ -6,6 +6,7 @@ import * as Database from "./Database";
 import * as Services from "./Services";
 
 let artistPromiseCache: { [key: string]: Promise<Artist> } = {};
+let albumPromiseCache: { [key: string]: Promise<Album> } = {};
 
 export function getUserPlaylists(authorization: string): Promise<Playlist[]> {
     return spotify.getUserPlaylists(authorization)
@@ -57,17 +58,21 @@ export function getTrack(spotifyTrack: SpotifyModel.Track): Promise<Track> {
 }
 
 export function getAlbum(spotifyAlbum: SpotifyModel.Album): Promise<Album> {
-    return Database.getAlbum(spotifyAlbum.id)
+    let id = spotifyAlbum.id;
+    return Database.getAlbum(id)
         .then(album => {
             if (album != null) {
                 return album;
+            } else if (albumPromiseCache.hasOwnProperty(id)) {
+                return albumPromiseCache[id];
             } else {
                 let albumPromise = Services.getAlbum({spotifyAlbum: spotifyAlbum});
+                albumPromiseCache[id] = albumPromise;
                 Database.saveAlbum(albumPromise);
                 return albumPromise;
             }
         }).catch(error => {
-            console.error("Failed to get album " + spotifyAlbum.id);
+            console.error("Failed to get album " + id);
             console.error(error);
             return null;
         });
