@@ -11,7 +11,7 @@ export class MusicBrainz {
     static searchArtist(spotifyArtist: SpotifyModel.Artist) : Promise<IArtist> {
         return this.api.searchArtist( {artist : spotifyArtist.name}).then(artistResults => {
             let bestScore = 0;
-            let choice : IArtist;
+            let choice : IArtist = null;
 
             artistResults.artists.forEach(artist => {
                 if(artist.score > bestScore) {
@@ -21,6 +21,6 @@ export class MusicBrainz {
             });
 
             return choice;
-        });
+        }).catch();
     }
 }

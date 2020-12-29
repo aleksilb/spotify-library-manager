@@ -1,42 +1,45 @@
 import {Album, Artist, Track} from './model/interfaces';
 import '../mock/artist_camille.json';
 
-
-
-export function saveAlbum(album: Album) {
-    console.log("Saving album");
-    console.info(album);
+export function saveAlbum(albumPromise: Promise<Album>) {
+    albumPromise.then(album => {
+        console.log("Saving album " + album.name);
+    })
 }
 
-export function getAlbum(id: string) {
-    if(id === '18LlCAG2iY8ht0dm7uKBy0') {
-        return require('../mock/album_oui.json')
+export function getAlbum(id: string) : Promise<Album> {
+    if(id === "18LlCAG2iY8ht0dm7uKBy0") {
+        return Promise.resolve(require('../mock/album_oui.json'));
     } else {
-        return null;
+        return Promise.resolve(null);
     }
 }
 
 
 export function getTrack(id : string) : Promise<Track> {
     if(id === "26tVbVkCppuEgNSQRnIu1c") {
-        return new Promise((resolve) => resolve(require('../mock/track_sous_le_sable.json')));
+        return Promise.resolve(require('../mock/track_sous_le_sable.json'));
     } else {
-        return new Promise((resolve) => resolve(null));
+        return Promise.resolve(null);
     }
 }
 
-export function saveTrack(track : Promise<Track>) {
-    console.log("Saving track");
+export function saveTrack(trackPromise : Promise<Track>) {
+    trackPromise.then(track => {
+        console.log("Saving track " + track.name);
+    });
 }
 
 export function getArtist(id : string) : Promise<Artist> {
     if(id === "56ZTgzPBDge0OvCGgMO3OY") {
-        return new Promise((resolve) => resolve(require("../mock/artist_beach_house.json")));
+        return Promise.resolve(require("../mock/artist_beach_house.json"));
     } else {
-        return new Promise((resolve) => resolve(null));
+        return Promise.resolve(null);
     }
 }
 
-export function saveArtist(id : string, artistPromise : Promise<Artist>) {
-    console.log("Saving artist " + id);
+export function saveArtist(artistPromise : Promise<Artist>) {
+    artistPromise.then(artist => {
+        console.log("Saving artist " + artist.name);
+    });
 }

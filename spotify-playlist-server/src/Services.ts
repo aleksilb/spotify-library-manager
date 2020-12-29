@@ -3,8 +3,8 @@ import {MusicBrainz} from "./service/MusicBrainz";
 import * as Mapping from "./Mapping";
 import {AlbumContext, ArtistContext, TrackContext} from "./model/context";
 
-export function getAlbum(context : AlbumContext) : Album {
-    return Mapping.createAlbum(context);
+export function getAlbum(context : AlbumContext) : Promise<Album> {
+    return new Promise((resolve) => resolve(Mapping.createAlbum(context)));
 }
 
 export function getTrack(context : TrackContext) : Promise<Track> {
