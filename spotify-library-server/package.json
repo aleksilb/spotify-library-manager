@@ -1,7 +1,7 @@
 {
-  "name": "spotify-playlist-server",
+  "name": "spotify-library-manager-server",
   "version": "1.0.0",
-  "description": "Server for advanced Spotify playlist application",
+  "description": "Server for Spotify library manager application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
