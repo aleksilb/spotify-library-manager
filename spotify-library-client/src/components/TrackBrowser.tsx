@@ -16,6 +16,7 @@ export const TrackBrowser = ({tracks} : TrackBrowserProps) => {
             <th>Album</th>
             <th>Year</th>
             <th>Country</th>
+            <th>Plays</th>
         </tr>
         </thead>
         <tbody>
@@ -29,6 +30,7 @@ export const TrackBrowser = ({tracks} : TrackBrowserProps) => {
                 <td>{track.album != null && track.album.name}</td>
                 <td>{track.year}</td>
                 <td>{track.country}</td>
+                <td>{track.plays}</td>
             </tr>
             }
         )}
