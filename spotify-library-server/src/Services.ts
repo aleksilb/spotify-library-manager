@@ -1,14 +1,19 @@
 import {Album, Artist, Track} from './model/interfaces';
 import {MusicBrainz} from "./service/MusicBrainz";
 import * as Mapping from "./Mapping";
+import * as LastFm from "./service/LastFm";
 import {AlbumContext, ArtistContext, TrackContext} from "./model/context";
 
 export function getAlbum(context: AlbumContext): Promise<Album> {
-    return new Promise((resolve) => resolve(Mapping.createAlbum(context)));
+    return Promise.resolve(Mapping.createAlbum(context));
 }
 
 export function getTrack(context: TrackContext): Promise<Track> {
-    return new Promise((resolve) => resolve(Mapping.createTrack(context)));
+    return LastFm.searchTrack(context)
+        .then(lfTrack => {
+            context.lastFmTrack = lfTrack;
+            return Mapping.createTrack(context);
+        });
 }
 
 export function getArtist(context: ArtistContext): Promise<Artist> {

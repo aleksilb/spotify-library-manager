@@ -16,7 +16,8 @@ export function createTrack(context : TrackContext) : Track {
         album : context.album,
         artists : context.artists,
         year : context.album.year,
-        country : context.artists[0].country
+        country : context.artists[0].country,
+        plays : (context.lastFmTrack != null) ? parseInt(context.lastFmTrack.userplaycount) : 0
     }
 }
 
