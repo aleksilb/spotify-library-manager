@@ -1,5 +1,5 @@
 import {Album, Artist, Playlist, Track} from './model/interfaces';
-import spotify from "./service/Spotify";
+import * as Spotify from "./service/Spotify";
 import * as SpotifyModel from "./model/external/spotify";
 import * as Mapping from "./Mapping";
 import * as Database from "./Database";
@@ -9,7 +9,7 @@ let artistPromiseCache: { [key: string]: Promise<Artist> } = {};
 let albumPromiseCache: { [key: string]: Promise<Album> } = {};
 
 export function getUserPlaylists(authorization: string): Promise<Playlist[]> {
-    return spotify.getUserPlaylists(authorization)
+    return Spotify.getUserPlaylists(authorization)
         .then(spotifyPlaylists =>
             spotifyPlaylists.map(spotifyPlaylist =>
                 Mapping.createPlaylist(spotifyPlaylist)))
@@ -21,7 +21,7 @@ export function getUserPlaylists(authorization: string): Promise<Playlist[]> {
 }
 
 export function getPlaylist(id: string): Promise<Playlist> {
-    return spotify.getPlaylist(id)
+    return Spotify.getPlaylist(id)
         .then(spotifyPlaylist => {
             let playlist = Mapping.createPlaylist(spotifyPlaylist);
             let trackPromises = spotifyPlaylist.tracks.items.map(spotifyTrack => getTrack(spotifyTrack.track));
