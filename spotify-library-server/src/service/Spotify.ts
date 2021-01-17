@@ -58,10 +58,14 @@ export async function getUserPlaylists(authorization: string): Promise<SpotifyMo
     return playlists;
 }
 
-export function getPlaylist(id: string): Promise<SpotifyModel.Playlist> {
-    return getToken().then(token => {
-        return fetch('https://api.spotify.com/v1/playlists/' + id, {
-            headers: {'authorization': 'Bearer ' + token}
-        }).then(response => response.json());
-    })
+export async function getPlaylist(id: string): Promise<SpotifyModel.Playlist> {
+    let token = await getToken();
+
+    return fetch('https://api.spotify.com/v1/playlists/' + id, {
+            headers: {'authorization': 'Bearer ' + token}})
+        .then(response => response.json())
+        .catch(error => {
+            console.error("Failed to fetch playlist " +id + " from Spotify.")
+            console.error(error);
+        });
 }
