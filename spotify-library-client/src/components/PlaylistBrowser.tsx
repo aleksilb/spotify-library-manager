@@ -46,7 +46,7 @@ export const PlaylistBrowser = ({playlists, selectHandler} : PlaylistBrowserProp
     handleSortChange(sortField, sortDir);
 
     return <div>
-        <h2>Playlists</h2>
+        <h2>Select playlist</h2>
         <FormControl component="fieldset">
             <FormLabel component="legend">Sorting</FormLabel>
             <RadioGroup aria-label="sorting" name="gender1" value={sortField} onChange={handleSortingChange}>

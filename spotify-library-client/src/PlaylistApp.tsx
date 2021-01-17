@@ -18,15 +18,19 @@ function PlaylistApp({token} : PlaylistAppProps) {
         })
     }, []);
 
-    const selectHandler = (playlistId:string) => {
-        Api.getPlaylist(playlistId).then(playlist => {
-            setPlaylist(playlist);
-        })
+    const selectHandler = (playlistId ?: string) => {
+        if(playlistId != null) {
+            Api.getPlaylist(playlistId).then(playlist => {
+                setPlaylist(playlist);
+            })
+        } else {
+            setPlaylist(undefined);
+        }
+
     }
 
     return <div className="App">
-        <PlaylistBrowser playlists={playlists} selectHandler={selectHandler}/>
-        <PlaylistView playlist={playlist} />
+        {(playlist == null) ? <PlaylistBrowser playlists={playlists} selectHandler={selectHandler}/> : <PlaylistView playlist={playlist} selectHandler={selectHandler} />}
     </div>;
 }
 
