@@ -5,7 +5,8 @@ import {AlbumContext, ArtistContext, TrackContext} from "./model/context";
 export function createPlaylist(spotifyPlaylist : Spotify.Playlist) : Playlist {
     return {
         id : spotifyPlaylist.id,
-        name : spotifyPlaylist.name
+        name : spotifyPlaylist.name,
+        tracksNum: spotifyPlaylist.tracks.total
     }
 }
 
