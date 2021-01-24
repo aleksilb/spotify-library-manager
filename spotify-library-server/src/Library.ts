@@ -20,20 +20,15 @@ export function getUserPlaylists(authorization: string): Promise<Playlist[]> {
         });
 }
 
-export function getPlaylist(id: string): Promise<Playlist> {
-    return Spotify.getPlaylist(id)
-        .then(spotifyPlaylist => {
-            let playlist = Mapping.createPlaylist(spotifyPlaylist);
-            let trackPromises = spotifyPlaylist.tracks.items.map(spotifyTrack => getTrack(spotifyTrack.track));
-            return Promise.all([playlist, Promise.all(trackPromises)]);
-        }).then(([playlist, tracks]) => {
-            playlist.tracks = tracks;
-            return playlist;
-        }).catch(error => {
-            console.error("Failed to get playlist " + id);
-            console.error(error);
-            return null;
-        });
+export async function getPlaylist(id: string): Promise<Playlist> {
+    let spotifyPlaylist = await Spotify.getPlaylist(id);
+
+    let playlist = await Mapping.createPlaylist(spotifyPlaylist);
+    let tracks = await Promise.all(spotifyPlaylist.tracks.items.map(spotifyTrack => getTrack(spotifyTrack.track)));
+
+    playlist.tracks = tracks;
+
+    return playlist;
 }
 
 export function getTrack(spotifyTrack: SpotifyModel.Track): Promise<Track> {

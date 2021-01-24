@@ -1,4 +1,5 @@
 import * as SpotifyModel from "../model/external/spotify";
+import {fileURLToPath} from "url";
 
 const fetch = require('node-fetch');
 
@@ -41,7 +42,6 @@ export async function getUserPlaylists(authorization: string): Promise<SpotifyMo
     let calls = [];
     while (handled < playlistData.total) {
         let callUrl = 'https://api.spotify.com/v1/me/playlists?offset='+handled+'&limit='+pageSize;
-        console.log(callUrl);
         const call = fetch(callUrl, {
             headers: {'authorization': authorization}
         })
@@ -61,11 +61,40 @@ export async function getUserPlaylists(authorization: string): Promise<SpotifyMo
 export async function getPlaylist(id: string): Promise<SpotifyModel.Playlist> {
     let token = await getToken();
 
-    return fetch('https://api.spotify.com/v1/playlists/' + id, {
+    let playlist = await fetch('https://api.spotify.com/v1/playlists/' + id, {
             headers: {'authorization': 'Bearer ' + token}})
         .then(response => response.json())
         .catch(error => {
             console.error("Failed to fetch playlist " +id + " from Spotify.")
             console.error(error);
         });
+
+    let tracks = await getAdditionalPlaylistTracks(playlist);
+    playlist.tracks.items = tracks;
+
+    return playlist;
+}
+
+async function getAdditionalPlaylistTracks(playlist: SpotifyModel.Playlist): Promise<SpotifyModel.PlaylistTrack[]> {
+    let token = await getToken();
+
+    let tracks = playlist.tracks.items;
+    let pageSize = playlist.tracks.limit;
+    let handled = pageSize;
+    let calls = [];
+    while (handled < playlist.tracks.total) {
+        let callUrl = 'https://api.spotify.com/v1/playlists/'+playlist.id+'/tracks?offset='+handled+'&limit='+pageSize;
+        const call = fetch(callUrl, {
+            headers: {'authorization': 'Bearer ' + token}})
+            .then(response =>
+                response.json())
+            .then(response =>
+                tracks = tracks.concat(response.items));
+        calls.push(call);
+        handled += pageSize;
+    }
+
+    await Promise.all(calls);
+
+    return tracks;
 }
