@@ -1,4 +1,4 @@
-import {Playlist} from "../model/interfaces";
+import {Playlist, Track} from "../model/interfaces";
 
 export function getUserPlaylists(token ?: string) : Promise<Playlist[]> {
     return fetch("http://localhost:3001/user-playlists", {
@@ -8,5 +8,10 @@ export function getUserPlaylists(token ?: string) : Promise<Playlist[]> {
 
 export function getPlaylist(id : string) : Promise<Playlist> {
     return fetch("http://localhost:3001/playlist/" + id)
+        .then(res => res.json());
+}
+
+export function getTrack(id : string) : Promise<Track> {
+    return fetch("http://localhost:3001/track/" + id)
         .then(res => res.json());
 }

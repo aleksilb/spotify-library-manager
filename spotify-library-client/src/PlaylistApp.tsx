@@ -26,7 +26,6 @@ function PlaylistApp({token} : PlaylistAppProps) {
         } else {
             setPlaylist(undefined);
         }
-
     }
 
     return <div className="App">
