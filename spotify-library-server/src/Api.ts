@@ -17,6 +17,12 @@ app.get('/playlist/:playlistId', (req, res) => {
     );
 });
 
+app.get('/track/:trackId', (req, res) => {
+    Library.getTrack(req.params.trackId).then(
+        track => res.send(track)
+    );
+})
+
 app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`)
 })

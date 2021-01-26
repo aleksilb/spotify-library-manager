@@ -8,48 +8,30 @@ import * as Services from "./Services";
 let artistPromiseCache: { [key: string]: Promise<Artist> } = {};
 let albumPromiseCache: { [key: string]: Promise<Album> } = {};
 
-export function getUserPlaylists(authorization: string): Promise<Playlist[]> {
-    return Spotify.getUserPlaylists(authorization)
-        .then(spotifyPlaylists =>
-            spotifyPlaylists.map(spotifyPlaylist =>
-                Mapping.createPlaylist(spotifyPlaylist)))
-        .catch(error => {
-            console.error("Failed to get user playlists with authorization " + authorization);
-            console.error(error);
-            return [];
-        });
+export async function getUserPlaylists(authorization: string): Promise<Playlist[]> {
+    let spotifyPlaylists = await Spotify.getUserPlaylists(authorization);
+
+    return spotifyPlaylists.map(spotifyPlaylist =>
+        Mapping.createPlaylist({spotifyPlaylist: spotifyPlaylist}));
 }
 
 export async function getPlaylist(id: string): Promise<Playlist> {
     let spotifyPlaylist = await Spotify.getPlaylist(id);
+    let tracks = spotifyPlaylist.tracks.items.map(playlistTrack => Mapping.createTrack({spotifyTrack: playlistTrack.track}))
 
-    let playlist = await Mapping.createPlaylist(spotifyPlaylist);
-    let tracks = await Promise.all(spotifyPlaylist.tracks.items.map(spotifyTrack => getTrack(spotifyTrack.track)));
-
-    playlist.tracks = tracks;
-
-    return playlist;
+    return  Mapping.createPlaylist({spotifyPlaylist: spotifyPlaylist, tracks: tracks});
 }
 
-export function getTrack(spotifyTrack: SpotifyModel.Track): Promise<Track> {
-    return Database.getTrack(spotifyTrack.id)
-        .then(track => {
-            if (track != null) {
-                return track;
-            } else {
-                let artistPromises = spotifyTrack.artists.map(artist => getArtist(artist));
-                let albumPromise = getAlbum(spotifyTrack.album);
-                return Promise.all([albumPromise, Promise.all(artistPromises)]).then(([album, artists]) => {
-                    let trackPromise = Services.getTrack({spotifyTrack: spotifyTrack, artists: artists, album: album});
-                    Database.saveTrack(trackPromise);
-                    return trackPromise;
-                });
-            }
-        }).catch(error => {
-            console.error("Failed to get track " + spotifyTrack.id);
-            console.error(error);
-            return null;
-        });
+export async function getTrack(id: string): Promise<Track> {
+    const spotifyTrack = await Spotify.getTrack(id);
+
+    let artistPromises = spotifyTrack.artists.map(artist => getArtist(artist));
+    let albumPromise = getAlbum(spotifyTrack.album);
+    let [album, artists] = await Promise.all([albumPromise, Promise.all(artistPromises)]);
+
+    let trackPromise = Services.getTrack({spotifyTrack: spotifyTrack, artists: artists, album: album});
+    Database.saveTrack(trackPromise);
+    return trackPromise;
 }
 
 export function getAlbum(spotifyAlbum: SpotifyModel.Album): Promise<Album> {

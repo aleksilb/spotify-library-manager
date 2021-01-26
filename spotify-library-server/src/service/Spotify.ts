@@ -75,6 +75,18 @@ export async function getPlaylist(id: string): Promise<SpotifyModel.Playlist> {
     return playlist;
 }
 
+export async function getTrack(id: string) : Promise<SpotifyModel.Track> {
+    let token = await getToken();
+
+    return fetch('https://api.spotify.com/v1/tracks/' + id, {
+        headers: {'authorization': 'Bearer ' + token}})
+        .then(response => response.json())
+        .catch(error => {
+            console.error("Failed to fetch playlist " +id + " from Spotify.")
+            console.error(error);
+        });
+}
+
 async function getAdditionalPlaylistTracks(playlist: SpotifyModel.Playlist): Promise<SpotifyModel.PlaylistTrack[]> {
     let token = await getToken();
 
