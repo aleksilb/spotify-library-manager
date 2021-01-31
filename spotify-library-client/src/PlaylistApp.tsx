@@ -29,7 +29,7 @@ function PlaylistApp({token} : PlaylistAppProps) {
     }
 
     return <div className="App">
-        {(playlist == null) ? <PlaylistBrowser playlists={playlists} selectHandler={selectHandler}/> : <PlaylistView playlist={playlist} selectHandler={selectHandler} />}
+        {(playlist == null) ? <PlaylistBrowser playlists={playlists} selectHandler={selectHandler}/> : <PlaylistView playlist={playlist} selectHandler={selectHandler} token={token}/>}
     </div>;
 }
 

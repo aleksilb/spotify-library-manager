@@ -15,3 +15,10 @@ export function getTrack(id : string) : Promise<Track> {
     return fetch("http://localhost:3001/track/" + id)
         .then(res => res.json());
 }
+
+export function deleteTrackFromPlaylist(playlistId : string, trackId :string, token:string) {
+    fetch("http://localhost:3001/playlist/" + playlistId + "/track/" + trackId, {
+        headers : {'authorization':'Bearer ' + token},
+        method:"DELETE"
+        });
+}
