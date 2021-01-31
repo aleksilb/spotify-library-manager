@@ -25,13 +25,17 @@ export async function getPlaylist(id: string): Promise<Playlist> {
 export async function getTrack(id: string): Promise<Track> {
     const spotifyTrack = await Spotify.getTrack(id);
 
-    let artistPromises = spotifyTrack.artists.map(artist => getArtist(artist));
-    let albumPromise = getAlbum(spotifyTrack.album);
+    let artistPromises = (spotifyTrack.artists != null) ? spotifyTrack.artists.map(artist => getArtist(artist)) : [];
+    let albumPromise = (spotifyTrack.album != null) ? getAlbum(spotifyTrack.album) : null;
     let [album, artists] = await Promise.all([albumPromise, Promise.all(artistPromises)]);
 
     let trackPromise = Services.getTrack({spotifyTrack: spotifyTrack, artists: artists, album: album});
     Database.saveTrack(trackPromise);
     return trackPromise;
+}
+
+export async function removeTrackFromPlaylist(playlistId: string, trackId: string, authorization:string) {
+    Spotify.removeTrackFromPlaylist(playlistId, trackId, authorization);
 }
 
 export function getAlbum(spotifyAlbum: SpotifyModel.Album): Promise<Album> {

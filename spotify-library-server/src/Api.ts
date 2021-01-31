@@ -21,7 +21,12 @@ app.get('/track/:trackId', (req, res) => {
     Library.getTrack(req.params.trackId).then(
         track => res.send(track)
     );
-})
+});
+
+app.delete('/playlist/:playlistId/track/:trackId', (req, res) => {
+    Library.removeTrackFromPlaylist(req.params.playlistId, req.params.trackId, req.header('authorization')).then(
+        () => res.send('DONE'));
+});
 
 app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`)

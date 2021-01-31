@@ -1,5 +1,5 @@
 import * as SpotifyModel from "../model/external/spotify";
-import {fileURLToPath} from "url";
+const axios = require('axios').default;
 
 const fetch = require('node-fetch');
 
@@ -21,7 +21,7 @@ function fetchToken(): Promise<string> {
             response => response.access_token);
 }
 
-export function getToken(): Promise<string> {
+function getToken(): Promise<string> {
     if (token == null) {
         token = fetchToken();
     }
@@ -78,11 +78,10 @@ export async function getPlaylist(id: string): Promise<SpotifyModel.Playlist> {
 export async function getTrack(id: string) : Promise<SpotifyModel.Track> {
     let token = await getToken();
 
-    return fetch('https://api.spotify.com/v1/tracks/' + id, {
+    return axios.get('https://api.spotify.com/v1/tracks/' + id, {
         headers: {'authorization': 'Bearer ' + token}})
-        .then(response => response.json())
         .catch(error => {
-            console.error("Failed to fetch playlist " +id + " from Spotify.")
+            console.error("Failed to fetch track " +id + " from Spotify.")
             console.error(error);
         });
 }
@@ -109,4 +108,17 @@ async function getAdditionalPlaylistTracks(playlist: SpotifyModel.Playlist): Pro
     await Promise.all(calls);
 
     return tracks;
+}
+
+export function removeTrackFromPlaylist(playlistId : string, trackId:string, authorization:string) {
+    console.log("Remove track " + trackId + " from playlist " +playlistId+ " with authentication " + authorization);
+    fetch('https://api.spotify.com/v1/playlists/' + playlistId+ '/tracks', {
+        headers: {'authorization': authorization},
+        method: 'DELETE',
+        body: JSON.stringify({"tracks":[{"uri":"spotify:track:" + trackId}]})})
+        .then(response => {
+            console.log(response);
+            return response.json();
+        }).then(response => console.log(response))
+        .catch(error => console.error(error));
 }

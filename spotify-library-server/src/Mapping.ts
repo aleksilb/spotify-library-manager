@@ -14,8 +14,8 @@ export function createTrack(context : TrackContext) : Track {
     return {
         id : context.spotifyTrack.id,
         name : context.spotifyTrack.name,
-        album : (context.album != null) ? context.album : createAlbum({spotifyAlbum:context.spotifyTrack.album}),
-        artists : (context.artists != null) ? context.artists : context.spotifyTrack.artists.map(artist => createArtist({spotifyArtist: artist})),
+        album : (context.album != null) ? context.album : (context.spotifyTrack.album != null) ? createAlbum({spotifyAlbum:context.spotifyTrack.album}) : undefined,
+        artists : (context.artists != null) ? context.artists : (context.spotifyTrack.artists != null) ? context.spotifyTrack.artists.map(artist => createArtist({spotifyArtist: artist})) : undefined,
         year : (context.album != null) ? context.album.year : undefined,
         country : (context.artists != null && context.artists.length > 0) ? context.artists[0].country : undefined,
         plays : (context.lastFmTrack != null) ? parseInt(context.lastFmTrack.userplaycount) : undefined
