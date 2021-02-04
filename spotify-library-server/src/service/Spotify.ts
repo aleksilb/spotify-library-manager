@@ -29,6 +29,10 @@ function getToken(): Promise<string> {
 }
 
 export async function getUserPlaylists(authorization: string): Promise<SpotifyModel.Playlist[]> {
+    if(process.env.USE_MOCKS === 'true') {
+        return require('../../mock/spotify/playlists_aleksi.json');
+    }
+
     const pageSize = 50;
     const playlistData: SpotifyModel.UserPlaylists = await fetch('https://api.spotify.com/v1/me/playlists?offset=0&limit='+pageSize, {
         headers: {'authorization': authorization}
@@ -59,8 +63,11 @@ export async function getUserPlaylists(authorization: string): Promise<SpotifyMo
 }
 
 export async function getPlaylist(id: string): Promise<SpotifyModel.Playlist> {
-    let token = await getToken();
+    if(process.env.USE_MOCKS === 'true') {
+        return require('../../mock/spotify/playlist_1.json');
+    }
 
+    let token = await getToken();
     let playlist = await fetch('https://api.spotify.com/v1/playlists/' + id, {
             headers: {'authorization': 'Bearer ' + token}})
         .then(response => response.json())
@@ -69,15 +76,18 @@ export async function getPlaylist(id: string): Promise<SpotifyModel.Playlist> {
             console.error(error);
         });
 
-    let tracks = await getAdditionalPlaylistTracks(playlist);
+    let tracks = await getAdditionalPlaylistTracks(playlist, token);
     playlist.tracks.items = tracks;
 
     return playlist;
 }
 
 export async function getTrack(id: string) : Promise<SpotifyModel.Track> {
-    let token = await getToken();
+    if(process.env.USE_MOCKS === 'true') {
+        return require('../../mock/spotify/sous_la_sable_track.json');
+    }
 
+    let token = await getToken();
     return axios.get('https://api.spotify.com/v1/tracks/' + id, {
         headers: {'authorization': 'Bearer ' + token}})
         .catch(error => {
@@ -86,9 +96,7 @@ export async function getTrack(id: string) : Promise<SpotifyModel.Track> {
         });
 }
 
-async function getAdditionalPlaylistTracks(playlist: SpotifyModel.Playlist): Promise<SpotifyModel.PlaylistTrack[]> {
-    let token = await getToken();
-
+async function getAdditionalPlaylistTracks(playlist: SpotifyModel.Playlist, token : string): Promise<SpotifyModel.PlaylistTrack[]> {
     let tracks = playlist.tracks.items;
     let pageSize = playlist.tracks.limit;
     let handled = pageSize;
@@ -112,6 +120,10 @@ async function getAdditionalPlaylistTracks(playlist: SpotifyModel.Playlist): Pro
 
 export function removeTrackFromPlaylist(playlistId : string, trackId:string, authorization:string) {
     console.log("Remove track " + trackId + " from playlist " +playlistId+ " with authentication " + authorization);
+    if(process.env.USE_MOCKS === 'true') {
+        return null;
+    }
+
     fetch('https://api.spotify.com/v1/playlists/' + playlistId+ '/tracks', {
         headers: {'authorization': authorization},
         method: 'DELETE',

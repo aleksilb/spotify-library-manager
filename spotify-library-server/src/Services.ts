@@ -1,5 +1,5 @@
 import {Album, Artist, Track} from './model/interfaces';
-import {MusicBrainz} from "./service/MusicBrainz";
+import * as MusicBrainz from "./service/MusicBrainz";
 import * as Mapping from "./Mapping";
 import * as LastFm from "./service/LastFm";
 import {AlbumContext, ArtistContext, TrackContext} from "./model/context";

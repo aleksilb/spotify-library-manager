@@ -1,0 +1,70 @@
+{
+  "name": "Idle Delilah",
+  "mbid": "ce02a43c-e316-49dd-8e70-82f02049debc",
+  "url": "https://www.last.fm/music/Azealia+Banks/_/Idle+Delilah",
+  "duration": "272000",
+  "streamable": {
+    "#text": "0",
+    "fulltrack": "0"
+  },
+  "listeners": "64530",
+  "playcount": "377711",
+  "artist": {
+    "name": "Azealia Banks",
+    "mbid": "0c3505e7-d884-43cf-9028-d318607190a4",
+    "url": "https://www.last.fm/music/Azealia+Banks"
+  },
+  "album": {
+    "artist": "Azealia Banks",
+    "title": "Broke with Expensive Taste",
+    "mbid": "2624d060-628e-4d37-97bd-d6b96c3e8717",
+    "url": "https://www.last.fm/music/Azealia+Banks/Broke+with+Expensive+Taste",
+    "image": [
+      {
+        "#text": "https://lastfm.freetls.fastly.net/i/u/34s/953cd190168c19e6708af5e5716faadf.png",
+        "size": "small"
+      },
+      {
+        "#text": "https://lastfm.freetls.fastly.net/i/u/64s/953cd190168c19e6708af5e5716faadf.png",
+        "size": "medium"
+      },
+      {
+        "#text": "https://lastfm.freetls.fastly.net/i/u/174s/953cd190168c19e6708af5e5716faadf.png",
+        "size": "large"
+      },
+      {
+        "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/953cd190168c19e6708af5e5716faadf.png",
+        "size": "extralarge"
+      }
+    ],
+    "@attr": {
+      "position": "1"
+    }
+  },
+  "userplaycount": "1",
+  "userloved": "0",
+  "toptags": {
+    "tag": [
+      {
+        "name": "Hip-Hop",
+        "url": "https://www.last.fm/tag/Hip-Hop"
+      },
+      {
+        "name": "great way to start an album",
+        "url": "https://www.last.fm/tag/great+way+to+start+an+album"
+      },
+      {
+        "name": "electronic",
+        "url": "https://www.last.fm/tag/electronic"
+      },
+      {
+        "name": "trip-hop",
+        "url": "https://www.last.fm/tag/trip-hop"
+      },
+      {
+        "name": "hip hop",
+        "url": "https://www.last.fm/tag/hip+hop"
+      }
+    ]
+  }
+}
