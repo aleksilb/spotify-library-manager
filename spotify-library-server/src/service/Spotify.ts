@@ -76,8 +76,7 @@ export async function getPlaylist(id: string): Promise<SpotifyModel.Playlist> {
             console.error(error);
         });
 
-    let tracks = await getAdditionalPlaylistTracks(playlist, token);
-    playlist.tracks.items = tracks;
+    playlist.tracks.items = await getAdditionalPlaylistTracks(playlist, token);
 
     return playlist;
 }
@@ -90,6 +89,9 @@ export async function getTrack(id: string) : Promise<SpotifyModel.Track> {
     let token = await getToken();
     return axios.get('https://api.spotify.com/v1/tracks/' + id, {
         headers: {'authorization': 'Bearer ' + token}})
+        .then(response => {
+            return response.data
+        })
         .catch(error => {
             console.error("Failed to fetch track " +id + " from Spotify.")
             console.error(error);
